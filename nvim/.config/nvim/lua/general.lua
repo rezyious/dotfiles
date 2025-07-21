@@ -1,0 +1,56 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+vim.opt.expandtab = true
+vim.opt.smarttab = true
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.mouse = ""
+vim.opt.showmode = false
+vim.opt.swapfile = false
+vim.opt.cursorline = true
+vim.opt.scrolloff = 5
+vim.o.textwidth = 120
+vim.o.wrap = true
+vim.o.linebreak = true
+vim.o.colorcolumn = "120"
+vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#db2a65" })
+vim.cmd("set clipboard+=unnamedplus")
+vim.opt.shortmess:append("I")
+vim.opt.signcolumn = "yes"
+vim.o.foldmethod = "marker"
+vim.o.foldmarker = "{{{,}}}"
+vim.g.netrw_banner = 0
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.fillchars:append({ eob = " " })
+
+-- show diagnostics instead of just hinting
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = ">>", -- or '>>', '■', '', etc.
+    spacing = 4,
+    format = function(diagnostic)
+      return diagnostic.message:gsub("\n.*", "") -- show only first line
+    end,
+  },
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
+
+-- format on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  callback = function(args)
+    require("conform").format({ bufnr = args.buf })
+  end,
+})
+
+-- transparent background function
+function Nobg()
+  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+end

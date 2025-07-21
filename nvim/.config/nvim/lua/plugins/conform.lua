@@ -1,0 +1,18 @@
+return {
+  "stevearc/conform.nvim",
+  config = function()
+    require("conform").setup({
+      formatters_by_ft = {
+        lua = { "stylua" },
+        javascript = { "prettier" },
+        css = { "prettier" },
+        html = { "prettier" },
+        json = { "prettier" },
+        python = { "autopep8" },
+        rust = { "rustfmt" },
+        go = { "gofmt" },
+        c = { "clang-format" },
+      },
+    })
+  end,
+}

@@ -1,0 +1,19 @@
+! Set font
+XTerm*faceName:  JetBrainsMono Nerd Font
+XTerm*faceSize: 16
+
+! Colors
+XTerm*background: #1e1e1e
+XTerm*foreground: #dcdcdc
+XTerm*cursorColor: #ffffff
+
+! Use 256 colors
+XTerm*colorMode: true
+XTerm*termName: xterm-256color
+
+! Scrollbar off
+XTerm*scrollBar: false
+
+! Blinking cursor off
+XTerm*cursorBlink: false
+
