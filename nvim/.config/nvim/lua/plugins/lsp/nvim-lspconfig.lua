@@ -57,6 +57,7 @@ return {
             prefix = "self",
           },
           cargo = {
+            autoload = true,
             buildScripts = {
               enable = true,
             },

@@ -20,7 +20,8 @@ if ask "Install standard packages?"; then
         network-manager-applet networkmanager nload obs-studio qbittorrent ripgrep parallel \
         pavucontrol proxychains-ng shotcut stow vlc tree wget curl wl-clipboard sway swaybg \
         swayidle swaylock traceroute unrar waybar wofi xclip xdg-desktop-portal-gnome \
-        xdg-desktop-portal-wlr xterm yazi yelp zoxide zsh ffmpeg tokei slurp vlc-plugins-all
+        xdg-desktop-portal-wlr xterm yazi yelp zoxide zsh ffmpeg tokei slurp vlc-plugins-all \
+        nsxiv
 fi
 
 
@@ -35,7 +36,7 @@ if ask "Install yay AUR helper?"; then
 fi
 
 # screenshot depends on slurp
-yay -S shotman
+yay -S shotman brave-bin freedownloadmanager 
 
 # # Rust install
 # if ask "Install Rust via rustup?"; then

@@ -9,7 +9,7 @@ set $right l
 
 set $term ghostty
 
-output * bg ~/.config/backgrounds/coffee-minimal-pixel-wallpapers.png fill
+output * bg ~/.config/backgrounds/pixel_art_purple_city.jpg fill
 
 # Clamshell Mode
 set $laptop eDP-1
