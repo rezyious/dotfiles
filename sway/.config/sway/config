@@ -17,9 +17,11 @@ bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 exec_always ~/.config/sway/clamshellmode.sh
 
+# wofi
 set $menu wofi  --show drun  -i | xargs swaymsg exec --
 
-
+# wmenu
+bindsym Mod4+g exec wmenu-run
 
 ### Idle configuration
 #
@@ -153,9 +155,12 @@ default_border none
 bindsym Ctrl+F1 exec swaymsg input type:keyboard xkb_layout us
 bindsym Ctrl+F2 exec swaymsg input type:keyboard xkb_layout ir
 
+# shotman
 bindsym Mod4+p       exec shotman --capture window
 bindsym Mod4+Shift+p exec shotman --capture region
 bindsym Mod4+Ctrl+p  exec shotman --capture output
+
+
 
 set $gnome_theme Adwaita-dark
 exec_always {
