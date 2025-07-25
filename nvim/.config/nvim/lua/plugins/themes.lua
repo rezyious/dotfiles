@@ -1,15 +1,11 @@
 return {
   {
-    "kdheepak/monochrome.nvim",
-  },
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "folke/tokyonight.nvim",
+    lazy = false,
     priority = 1000,
     config = function()
-      require("catppuccin").setup({
-        transparent_background = true,
-        no_italic = true,
+      require("tokyonight").setup({
+        transparent = true,
       })
     end,
   },

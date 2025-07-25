@@ -25,6 +25,7 @@ vim.g.netrw_banner = 0
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.fillchars:append({ eob = " " })
+vim.opt.termguicolors = true
 
 -- show diagnostics instead of just hinting
 vim.diagnostic.config({

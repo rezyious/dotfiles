@@ -52,9 +52,6 @@ end, { desc = "Restart LSP by reloading buffer" })
 -- Terminal
 vim.keymap.set("n", "<Leader>t", ":vsplit | terminal<CR>i", { noremap = true })
 
--- Markdown
-vim.keymap.set("n", "<Leader>m", "<cmd>RenderMarkdown toggle<CR>", { noremap = true })
-
 -- harpoon
 vim.keymap.set("n", "<leader>hm", function()
   require("harpoon.ui").toggle_quick_menu()

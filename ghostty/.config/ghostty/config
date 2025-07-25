@@ -1,6 +1,6 @@
 font-family = "JetBrainsMono Nerd Font"
-font-size = 12
-theme = catppuccin-mocha
+font-size = 16
+theme = tokyonight_night
 mouse-hide-while-typing = true
 
 background-opacity = 0.9
