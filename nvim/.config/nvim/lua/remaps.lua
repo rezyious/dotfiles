@@ -28,14 +28,14 @@ vim.api.nvim_set_keymap(
   "n",
   "<leader>cd",
   ":lua require('cmp').setup.buffer({ enabled = false })<CR>",
-  { noremap = true, silent = true }
+  { noremap = true, silent = true, desc = "disable cmp" }
 )
 
 vim.api.nvim_set_keymap(
   "n",
   "<leader>ce",
   ":lua require('cmp').setup.buffer({ enabled = true })<CR>",
-  { noremap = true, silent = true }
+  { noremap = true, silent = true, desc = "enable cmp" }
 )
 
 -- Start and Stop LSP server
@@ -68,3 +68,8 @@ end, { desc = "Next file in harpoon" })
 vim.keymap.set("n", "<leader>hp", function()
   require("harpoon.ui").nav_prev()
 end, { desc = "Previous file in harpoon" })
+
+-- format current buffer with conform
+vim.keymap.set("n", "<leader>ft", function()
+  require("conform").format()
+end, { noremap = true, silent = true, desc = "Format current buffer with conform" })

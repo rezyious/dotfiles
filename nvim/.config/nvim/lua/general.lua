@@ -26,6 +26,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.fillchars:append({ eob = " " })
 vim.opt.termguicolors = true
+-- vim.o.cmdheight = 0 -- remove cmdline
 
 -- show diagnostics instead of just hinting
 vim.diagnostic.config({
@@ -55,3 +56,28 @@ function Nobg()
   vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
+
+-- Comments continuation
+-- Enable 'r' (continue comments on Enter) only in insert mode
+vim.api.nvim_create_autocmd("InsertEnter", {
+  pattern = "*",
+  callback = function()
+    vim.opt_local.formatoptions:append("r")
+  end,
+})
+
+-- Disable 'r' when leaving insert mode
+vim.api.nvim_create_autocmd("InsertLeave", {
+  pattern = "*",
+  callback = function()
+    vim.opt_local.formatoptions:remove("r")
+  end,
+})
+
+-- Always remove 'o' (never continue comment on 'o' key)
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    vim.opt_local.formatoptions:remove("o")
+  end,
+})
