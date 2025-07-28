@@ -58,10 +58,10 @@ function Nobg()
 end
 
 -- reset status line colors
-function Reset_status()
-  vim.cmd("edit")
+function Reset_colors_override()
   vim.api.nvim_set_hl(0, "StatusLine", { fg = "#c6c6c6", bg = "#2b2b2b" })
   vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "#c6c6c6", bg = "#080808" })
+  vim.api.nvim_set_hl(0, "NotifyBackground", { bg = "#000000" })
 end
 
 -- Comments continuation
