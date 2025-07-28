@@ -15,7 +15,7 @@ vim.o.textwidth = 120
 vim.o.wrap = true
 vim.o.linebreak = true
 vim.o.colorcolumn = "120"
-vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#db2a65" })
+vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#555005" })
 vim.cmd("set clipboard+=unnamedplus")
 vim.opt.shortmess:append("I")
 vim.opt.signcolumn = "yes"
@@ -55,6 +55,13 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 function Nobg()
   vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+end
+
+-- reset status line colors
+function Reset_status()
+  vim.cmd("edit")
+  vim.api.nvim_set_hl(0, "StatusLine", { fg = "#c6c6c6", bg = "#2b2b2b" })
+  vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "#c6c6c6", bg = "#080808" })
 end
 
 -- Comments continuation

@@ -26,6 +26,7 @@ local bubbles_theme = {
     c = { fg = colors.white },
   },
 }
+
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
