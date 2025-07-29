@@ -5,5 +5,3 @@ require("config.lazy")
 require("remaps")
 
 vim.cmd("colorscheme tokyonight")
-
--- Reset_colors_override()
