@@ -73,3 +73,18 @@ end, { desc = "Previous file in harpoon" })
 vim.keymap.set("n", "<leader>ft", function()
   require("conform").format()
 end, { noremap = true, silent = true, desc = "Format current buffer with conform" })
+
+-- rust
+vim.keymap.set(
+  "n",
+  "<leader>pp",
+  'oprintln!("{}");<ESC>F{a',
+  { noremap = true, silent = true, desc = "rust - println! macro" }
+)
+
+vim.keymap.set(
+  "n",
+  "<leader>pd",
+  'oprintln!("{:?}");<ESC>F{a',
+  { noremap = true, silent = true, desc = "rust - println! debug macro" }
+)

@@ -4,6 +4,6 @@ require("config.lazy")
 
 require("remaps")
 
-vim.cmd("colorscheme darkvoid")
+vim.cmd("colorscheme tokyonight")
 
-Reset_colors_override()
+-- Reset_colors_override()
