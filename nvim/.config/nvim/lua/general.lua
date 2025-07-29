@@ -16,7 +16,8 @@ vim.o.wrap = true
 vim.o.linebreak = true
 vim.o.colorcolumn = "120"
 vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#555005" })
-vim.cmd("set clipboard+=unnamedplus")
+vim.opt.clipboard = "unnamedplus"
+-- vim.cmd("set clipboard+=unnamedplus")
 vim.opt.shortmess:append("I")
 vim.opt.signcolumn = "yes"
 vim.o.foldmethod = "marker"

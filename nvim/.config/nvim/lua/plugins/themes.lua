@@ -1,4 +1,5 @@
 return {
+  -- {{{  INFO: darkvoid
   {
     "aliqyan-21/darkvoid.nvim",
     lazy = false,
@@ -35,25 +36,8 @@ return {
       vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "#c6c6c6", bg = "#080808" })
     end,
   },
-  {
-    "rebelot/kanagawa.nvim",
-    config = function()
-      require("kanagawa").setup({
-        compile = false,
-        undercurl = false,
-        commentStyle = { italic = false },
-        keywordStyle = { italic = false },
-        statementStyle = { bold = true },
-        transparent = true,
-        terminalColors = true,
-        theme = "dragon",
-        background = {
-          dark = "dragon",
-          light = "lotus",
-        },
-      })
-    end,
-  },
+  -- }}}
+  -- {{{  INFO: tokyonight
   {
     "folke/tokyonight.nvim",
     lazy = false,
@@ -113,4 +97,5 @@ return {
       })
     end,
   },
+  -- }}}
 }

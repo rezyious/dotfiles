@@ -88,3 +88,17 @@ vim.keymap.set(
   'oprintln!("{:?}");<ESC>F{a',
   { noremap = true, silent = true, desc = "rust - println! debug macro" }
 )
+
+-- aditional
+local keymap = vim.keymap.set
+local opts = { noremap = true, silent = true }
+
+-- Better window navigation
+keymap("n", "<m-h>", "<C-w>h", opts)
+keymap("n", "<m-j>", "<C-w>j", opts)
+keymap("n", "<m-k>", "<C-w>k", opts)
+keymap("n", "<m-l>", "<C-w>l", opts)
+
+-- Stay in indent mode
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
