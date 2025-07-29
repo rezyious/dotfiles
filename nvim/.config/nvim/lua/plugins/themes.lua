@@ -2,8 +2,7 @@ return {
   {
     "rezyious/monochrome.nvim",
     config = function()
-      vim.g.monochrome_style = "amplified"
-      vim.cmd("colorscheme monochrome")
+      vim.g.monochrome_style = "brighter"
     end,
   },
   {
