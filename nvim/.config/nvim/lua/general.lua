@@ -17,7 +17,6 @@ vim.o.linebreak = true
 vim.o.colorcolumn = "120"
 vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#555005" })
 vim.opt.clipboard = "unnamedplus"
--- vim.cmd("set clipboard+=unnamedplus")
 vim.opt.shortmess:append("I")
 vim.opt.signcolumn = "yes"
 vim.o.foldmethod = "marker"
@@ -27,7 +26,6 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.fillchars:append({ eob = " " })
 vim.opt.termguicolors = true
--- vim.o.cmdheight = 0 -- remove cmdline
 
 -- show diagnostics instead of just hinting
 vim.diagnostic.config({

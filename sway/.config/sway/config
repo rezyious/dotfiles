@@ -9,7 +9,7 @@ set $right l
 
 set $term ghostty
 
-output * bg ~/.config/backgrounds/magical_land.png fill
+output * bg ~/.config/backgrounds/bg_1.jpg fill
 
 # Clamshell Mode
 set $laptop eDP-1
@@ -169,5 +169,4 @@ exec_always {
 }
 
 include /etc/sway/config.d/*
-
 
