@@ -4,5 +4,4 @@ require("config.lazy")
 
 require("remaps")
 
-vim.cmd("colorscheme monochrome")
-Nobg()
+vim.cmd("colorscheme tokyonight")
