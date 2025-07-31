@@ -58,6 +58,12 @@ function Nobg()
   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
+-- opposite of above
+function Solidbg()
+  vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000" })
+end
+
 -- reset status line colors
 function Reset_colors_override()
   vim.api.nvim_set_hl(0, "StatusLine", { fg = "#c6c6c6", bg = "#2b2b2b" })
