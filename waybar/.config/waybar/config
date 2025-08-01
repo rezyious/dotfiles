@@ -8,16 +8,8 @@
 // Configuration - modules-left
 
     "modules-left": [
-       "custom/launcher",
-        "sway/workspaces",
-        "sway/mode"
+    "sway/workspaces",
     ],
-
-    "custom/launcher": {
-        "format":"<span size='x-large'>G</span>",
-        "on-click": "exec ghostty",
-        "tooltip": false
-    },
 
     "sway/workspaces": {
         "disable-scroll": true,
@@ -43,7 +35,6 @@
 // Configuration - modules-center
     
     "modules-center": [
-    "network"
    ],
 
     "network": {
@@ -59,8 +50,7 @@
 // Configuration - modules-right
 
     "modules-right": [
-//       "cpu",
-//      "memory",
+        "network",
         "pulseaudio",
         "battery",
         "clock",
@@ -120,7 +110,6 @@
 
     "custom/power": {
         "format":"⏻",
-     //   "on-click": "exec ~/.config/sway/scripts/power_menu.sh",
         "on-click": "exec ~/.config/sway/power_off.sh",
         "tooltip": false
     },
