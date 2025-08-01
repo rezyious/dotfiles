@@ -18,10 +18,14 @@ vim.keymap.set("n", "<leader>fk", builtin_telescope.keymaps, { desc = "Telescope
 
 -- LSP
 -- vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", {})
+-- vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
+-- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { desc = "hover doc" })
+vim.keymap.set("n", "<leader>gr", "<cmd>Lspsaga finder<CR>", { desc = "refrences" })
+vim.keymap.set("n", "<leader>gp", "<cmd>Lspsaga peek_definition<CR>", { desc = "peek definition" })
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
-vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", {})
+vim.keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", { desc = "all symbols" })
 
 -- Enable/disable cmp
 vim.api.nvim_set_keymap(
@@ -46,7 +50,7 @@ vim.keymap.set("n", "<leader>ld", function()
 end, { desc = "Stop LSP" })
 
 vim.keymap.set("n", "<leader>le", function()
-  vim.cmd("edit") -- Reload current buffer to trigger LSP attach
+  vim.cmd("edit")
 end, { desc = "Restart LSP by reloading buffer" })
 
 -- Terminal
