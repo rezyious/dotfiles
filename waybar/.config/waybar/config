@@ -42,10 +42,10 @@
    ],
 
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
+        "format-wifi": "{essid} ({signalStrength}%)",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "on-click":"nm-connection-editor"
@@ -113,11 +113,11 @@
 
 
     "cpu": {
-        "format": "{usage}% ",
+        "format": "CPU : {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "MEM : {}% "
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -128,6 +128,13 @@
         "format-icons": ["", "", ""]
     },
 
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
     "custom/power": {
         "format":"⏻",
         "on-click": "exec ~/.config/sway/power_off.sh",
