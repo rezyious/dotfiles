@@ -61,8 +61,8 @@
         },
         "format": "BAT : {capacity}%",
         "format-full": "BAT : {capacity}%",
-        "format-charging": "BAT : {capacity}% ",
-        "format-plugged": "BAT : {capacity}% ",
+        "format-charging": "BAT : {capacity}% ch",
+        "format-plugged": "BAT : {capacity}% pl",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
