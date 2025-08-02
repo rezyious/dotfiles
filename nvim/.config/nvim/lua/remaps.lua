@@ -93,6 +93,13 @@ vim.keymap.set(
   { noremap = true, silent = true, desc = "rust - println! debug macro" }
 )
 
+vim.keymap.set(
+  "n",
+  "<leader>all",
+  "ggO#![allow(dead_code)]<ESC>o#![allow(unused_variables)]",
+  { noremap = true, silent = true, desc = "rust - allow unused and dead_code" }
+)
+
 -- aditional
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
