@@ -113,3 +113,9 @@ keymap("n", "<m-l>", "<C-w>l", opts)
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+
+-- windows
+vim.keymap.set("n", "<C-w>z", "<cmd>WindowsMaximize<CR>")
+vim.keymap.set("n", "<C-w>_", "<cmd>WindowsMaximizeVertically<CR>")
+vim.keymap.set("n", "<C-w>|", "<cmd>WindowsMaximizeHorizontally<CR>")
+vim.keymap.set("n", "<C-w>=", "<cmd>WindowsEqualize<CR>")
