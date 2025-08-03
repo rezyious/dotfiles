@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 40,
+    "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": ["clock"],
     "modules-right": ["sway/scratchpad","tray", "pulseaudio", "temperature", "cpu", "memory", "battery",
@@ -40,12 +40,12 @@
         // "format": "( {} )"
     },
     "clock": {
-        "format": "{:%a %d %b - %H:%M}",
+        "format": "{:%H:%M}",
         "tooltip": false
     },
     "cpu": {
         "interval": 5,
-        "format": "CPU : {}%",
+        "format": "CPU : {:0.2f}%",
         "max-length": 10
     },
     "memory": {
