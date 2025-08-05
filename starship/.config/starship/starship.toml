@@ -1,0 +1,3 @@
+[rust]
+style = "fg:#ff0000"
+format = '[via $symbol[$version](bold $style) ]($style)'
