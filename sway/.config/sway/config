@@ -160,6 +160,8 @@ bindsym Mod4+p       exec shotman --capture window
 bindsym Mod4+Shift+p exec shotman --capture region
 bindsym Mod4+Ctrl+p  exec shotman --capture output
 
+# suspend
+bindsym Mod4+Shift+s exec systemctl suspend
 
 
 set $gnome_theme Adwaita-dark
