@@ -26,6 +26,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.fillchars:append({ eob = " " })
 vim.opt.termguicolors = true
+vim.o.mousemoveevent = true
 
 -- show diagnostics instead of just hinting
 vim.diagnostic.config({

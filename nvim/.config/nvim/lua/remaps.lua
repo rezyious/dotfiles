@@ -119,3 +119,6 @@ vim.keymap.set("n", "<C-w>z", "<cmd>WindowsMaximize<CR>")
 vim.keymap.set("n", "<C-w>_", "<cmd>WindowsMaximizeVertically<CR>")
 vim.keymap.set("n", "<C-w>|", "<cmd>WindowsMaximizeHorizontally<CR>")
 vim.keymap.set("n", "<C-w>=", "<cmd>WindowsEqualize<CR>")
+
+-- tab
+vim.keymap.set("n", "<C-t>", "<cmd>tabnew<CR>", { desc = "mine - new tab", noremap = false })

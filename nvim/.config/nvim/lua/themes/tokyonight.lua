@@ -22,6 +22,7 @@ return {
         hl.Comment = {
           fg = "#f0f2f5",
         }
+
         -- {{{ borderless telescope
         local prompt = "#2d3149"
         hl.TelescopeNormal = {
