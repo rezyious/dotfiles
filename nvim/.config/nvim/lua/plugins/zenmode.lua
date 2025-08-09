@@ -1,7 +1,22 @@
 return {
   "folke/zen-mode.nvim",
-  opts = {
-    width = 120,
-    backdrop = 0.9,
-  },
+  config = function()
+    require("zen-mode").setup({
+      window = {
+        width = 140,
+        backdrop = 0.95,
+      },
+      plugins = {
+        tmux = { enabled = false },
+      },
+      on_open = function()
+        -- Hide tmux status bar
+        vim.fn.system("tmux set status off")
+      end,
+      on_close = function()
+        -- Show tmux status bar again
+        vim.fn.system("tmux set status on")
+      end,
+    })
+  end,
 }
