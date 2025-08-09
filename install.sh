@@ -21,7 +21,7 @@ if ask "Install standard packages?"; then
         ffmpegthumbnailer firefox fzf ghostty gnome-text-editor gimp gnome-calculator gnome-clocks \
         gnome-system-monitor htop jq kitty lsd man-db man-pages nano nautilus ncdu neofetch \
         network-manager-applet networkmanager nload obs-studio qbittorrent ripgrep parallel \
-        pavucontrol proxychains-ng shotcut stow vlc tree wget curl wl-clipboard sway swaybg \
+        pavucontrol proxychains-ng kdenlive stow vlc tree wget curl wl-clipboard sway swaybg \
         swayidle swaylock traceroute unrar waybar wofi xclip xdg-desktop-portal-gnome \
         xdg-desktop-portal-wlr xterm yazi yelp zoxide zsh ffmpeg tokei slurp vlc-plugins-all \
         nsxiv wmenu noto-fonts-cjk
