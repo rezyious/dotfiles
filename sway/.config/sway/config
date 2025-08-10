@@ -7,6 +7,9 @@ set $down j
 set $up k
 set $right l
 
+
+output HDMI-A-1 resolution 1920x1080
+
 set $term ghostty
 
 output * bg ~/.config/backgrounds/lonely-fish.png fill
