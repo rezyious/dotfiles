@@ -3,7 +3,7 @@ font-size = 18
 theme = tokyonight_night
 mouse-hide-while-typing = true
 
-background-opacity = 0.9
+background-opacity = 0.95
 window-padding-x = 0
 window-padding-y = 0
 window-padding-balance = true
