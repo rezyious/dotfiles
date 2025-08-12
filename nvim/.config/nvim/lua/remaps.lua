@@ -1,13 +1,4 @@
-vim.keymap.set("n", "<leader>e", ":Ex<CR>", { silent = true })
-vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { silent = true })
-vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true })
-vim.keymap.set("n", "<leader>s", ":w<CR>", { silent = true })
--- vim.keymap.set("n", "<leader>t", ":tabnew<CR>", { silent = true })
-
--- Zenmode
-vim.keymap.set("n", "<leader>z", ":ZenMode<CR>", { silent = true })
-
--- Telescope
+-- {{{ Telescope
 local builtin_telescope = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin_telescope.find_files, { desc = "Telescope find files" })
 vim.keymap.set("n", "<leader>fg", builtin_telescope.live_grep, { desc = "Telescope live grep" })
@@ -15,8 +6,9 @@ vim.keymap.set("n", "<leader>fb", builtin_telescope.buffers, { desc = "Telescope
 vim.keymap.set("n", "<leader>fh", builtin_telescope.help_tags, { desc = "Telescope help tags" })
 vim.keymap.set("n", "<leader>fz", builtin_telescope.current_buffer_fuzzy_find, { desc = "Telescope fuzzyfinder" })
 vim.keymap.set("n", "<leader>fk", builtin_telescope.keymaps, { desc = "Telescope show keymaps" })
+-- }}}
 
--- LSP
+-- {{{ LSP
 -- vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 -- vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
 -- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
@@ -26,8 +18,9 @@ vim.keymap.set("n", "<leader>gp", "<cmd>Lspsaga peek_definition<CR>", { desc = "
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "LSP: go to definition" })
 vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { desc = "LSP: code action" })
 vim.keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", { desc = "LSP: all symbols" })
+-- }}}
 
--- Enable/disable cmp
+-- {{{ Enable/disable cmp
 vim.api.nvim_set_keymap(
   "n",
   "<leader>cd",
@@ -41,8 +34,9 @@ vim.api.nvim_set_keymap(
   ":lua require('cmp').setup.buffer({ enabled = true })<CR>",
   { noremap = true, silent = true, desc = "enable cmp" }
 )
+-- }}}
 
--- Start and Stop LSP server
+-- {{{ Start and Stop LSP server
 vim.keymap.set("n", "<leader>ld", function()
   for _, client in pairs(vim.lsp.get_clients({ bufnr = 0 })) do
     client.stop()
@@ -52,11 +46,9 @@ end, { desc = "Stop LSP" })
 vim.keymap.set("n", "<leader>le", function()
   vim.cmd("edit")
 end, { desc = "Restart LSP by reloading buffer" })
+-- }}}
 
--- Terminal
-vim.keymap.set("n", "<Leader>t", ":vsplit | terminal<CR>i", { noremap = true })
-
--- harpoon
+-- {{{ harpoon
 vim.keymap.set("n", "<leader>hm", function()
   require("harpoon.ui").toggle_quick_menu()
 end, { desc = "Toggle Harpoon quick menu" })
@@ -72,13 +64,9 @@ end, { desc = "Next file in harpoon" })
 vim.keymap.set("n", "<leader>hp", function()
   require("harpoon.ui").nav_prev()
 end, { desc = "Previous file in harpoon" })
+-- }}}
 
--- format current buffer with conform
-vim.keymap.set("n", "<leader>ft", function()
-  require("conform").format()
-end, { noremap = true, silent = true, desc = "Format current buffer with conform" })
-
--- rust
+-- {{{ rust
 vim.keymap.set(
   "n",
   "<leader>pp",
@@ -100,11 +88,42 @@ vim.keymap.set(
   { noremap = true, silent = true, desc = "rust - allow unused and dead_code" }
 )
 
--- aditional
+vim.keymap.set(
+  "n",
+  "<leader>rf",
+  "O#[rustfmt::skip]<ESC>",
+  { noremap = true, silent = true, desc = "rust -  #[rustfmt::skip]" }
+)
+
+vim.keymap.set(
+  "n",
+  "<leader>rs",
+  "<cmd>LspStart rust_analyzer<CR>",
+  { noremap = true, silent = true, desc = "rust -  start rust analyzer" }
+)
+-- }}}
+
+vim.keymap.set("i", "<C-c>", "<Esc>", { noremap = true }) -- rempa Esc to Ctrl+c :)
+vim.keymap.set("n", "<leader>e", ":Ex<CR>", { silent = true, desc = "open netrw" })
+vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { silent = true })
+vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true })
+vim.keymap.set("n", "<leader>s", ":w<CR>", { silent = true })
+
+-- Zenmode
+vim.keymap.set("n", "<leader>z", ":ZenMode<CR>", { silent = true })
+
+-- Terminal
+vim.keymap.set("n", "<Leader>t", ":vsplit | terminal<CR>i", { noremap = true })
+
+-- format current buffer with conform
+vim.keymap.set("n", "<leader>ft", function()
+  require("conform").format()
+end, { noremap = true, silent = true, desc = "Format current buffer with conform" })
+
+-- Better window navigation
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
--- Better window navigation
 keymap("n", "<m-h>", "<C-w>h", opts)
 keymap("n", "<m-j>", "<C-w>j", opts)
 keymap("n", "<m-k>", "<C-w>k", opts)
