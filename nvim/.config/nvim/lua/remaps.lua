@@ -96,7 +96,7 @@ vim.keymap.set(
 vim.keymap.set(
   "n",
   "<leader>all",
-  "ggO#![allow(dead_code)]<ESC>o#![allow(unused_variables)]",
+  "ggO#![allow(dead_code)]<ESC>o#![allow(unused_variables)]<ESC>o<ESC>",
   { noremap = true, silent = true, desc = "rust - allow unused and dead_code" }
 )
 
