@@ -24,7 +24,7 @@ if ask "Install standard packages?"; then
         pavucontrol proxychains-ng kdenlive stow vlc tree wget curl wl-clipboard sway swaybg \
         swayidle swaylock traceroute unrar waybar wofi xclip xdg-desktop-portal-gnome \
         xdg-desktop-portal-wlr xterm yazi yelp zoxide zsh ffmpeg tokei slurp vlc-plugins-all \
-        nsxiv wmenu noto-fonts-cjk
+        nsxiv wmenu noto-fonts-cjk tokei
 fi
 
 
