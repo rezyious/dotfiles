@@ -3,8 +3,8 @@ return {
   config = function()
     require("zen-mode").setup({
       window = {
-        width = 140,
-        backdrop = 0.95,
+        width = 110,
+        -- backdrop = 0.95,
       },
       plugins = {
         tmux = { enabled = false },

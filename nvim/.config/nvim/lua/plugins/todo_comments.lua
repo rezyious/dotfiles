@@ -4,17 +4,20 @@ return {
   config = function()
     require("todo-comments").setup({
       keywords = {
-        NOTICE = { icon = " ", color = "info" },
-        IMPORTANT = { icon = " ", color = "error" },
+        NOTE = { icon = "⁕ ", color = "info" },
+        WARN = { icon = " ", color = "error" },
+        TODO = { icon = "‣ ", color = "default" },
+        PERF = { icon = "P ", color = "info" },
+        HACK = { icon = "H ", color = "warning" },
+        TEST = { icon = "T ", color = "test" },
       },
     })
   end,
 }
-
--- Defaults :
--- TODO
--- HACK
--- WARN
--- PERF
--- NOTE
--- TEST
+-- keywords :
+-- NOTE:
+-- WARN:
+-- TODO:
+-- PERF:
+-- HACK:
+-- TEST:
