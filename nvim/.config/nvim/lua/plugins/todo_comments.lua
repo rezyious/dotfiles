@@ -10,6 +10,7 @@ return {
         PERF = { icon = "P ", color = "info" },
         HACK = { icon = "H ", color = "warning" },
         TEST = { icon = "T ", color = "test" },
+        _ = { icon = " ", color = "error" },
       },
     })
   end,
@@ -21,3 +22,4 @@ return {
 -- PERF:
 -- HACK:
 -- TEST:
+-- _:
