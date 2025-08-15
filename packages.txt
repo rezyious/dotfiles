@@ -1,0 +1,19 @@
+# starship
+curl -sS https://starship.rs/install.sh | sh
+
+# packages
+neovim git tmux p7zip bat bc bind blanket brightnessctl btop dysk evince fd 
+ffmpegthumbnailer firefox fzf ghostty gnome-text-editor gimp gnome-calculator gnome-clocks 
+gnome-system-monitor htop jq  lsd man-db man-pages nano nautilus ncdu  
+network-manager-applet networkmanager nload obs-studio qbittorrent ripgrep  
+pavucontrol proxychains-ng kdenlive stow vlc tree wget curl wl-clipboard sway swaybg 
+swayidle swaylock traceroute unrar waybar wofi xclip xdg-desktop-portal-gnome 
+xdg-desktop-portal-wlr xterm yazi yelp zoxide zsh ffmpeg tokei slurp vlc-plugins-all 
+nsxiv wmenu noto-fonts-cjk tokei
+
+# yay
+# screenshot depends on slurp
+shotman
+brave-bin freedownloadmanager 
+
+

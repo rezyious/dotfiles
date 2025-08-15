@@ -4,30 +4,6 @@ return {
     local lspconfig = require("lspconfig")
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-    -- C
-    lspconfig.clangd.setup({
-      capabilities = capabilities,
-      autostart = false,
-    })
-
-    -- python
-    lspconfig.pylsp.setup({
-      autostart = false,
-      capabilities = capabilities,
-    })
-
-    -- go
-    lspconfig.gopls.setup({
-      autostart = false,
-      capabilities = capabilities,
-    })
-
-    -- lua
-    lspconfig.lua_ls.setup({
-      autostart = false,
-      capabilities = capabilities,
-    })
-
     -- typescript
     lspconfig.ts_ls.setup({
       autostart = false,
@@ -46,13 +22,7 @@ return {
       capabilities = capabilities,
     })
 
-    -- bash
-    lspconfig.bashls.setup({
-      autostart = false,
-      capabilities = capabilities,
-    })
-
-    -- Rust
+    -- {{{ Rust
     lspconfig.rust_analyzer.setup({
       capabilities = capabilities,
       autostart = false,
@@ -77,5 +47,6 @@ return {
         },
       },
     })
+    -- }}}
   end,
 }

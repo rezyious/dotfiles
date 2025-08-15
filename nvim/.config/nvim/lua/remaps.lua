@@ -103,11 +103,24 @@ vim.keymap.set(
 )
 -- }}}
 
+-- {{{ Better window navigation
+vim.keymap.set("n", "<m-h>", "<C-w>h", { noremap = true, silent = true })
+vim.keymap.set("n", "<m-j>", "<C-w>j", { noremap = true, silent = true })
+vim.keymap.set("n", "<m-k>", "<C-w>k", { noremap = true, silent = true })
+vim.keymap.set("n", "<m-l>", "<C-w>l", { noremap = true, silent = true })
+-- }}}
+
+-- {{{ Stay in indent mode
+vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
+vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
+-- }}}
+
 vim.keymap.set("i", "<C-c>", "<Esc>", { noremap = true }) -- rempa Esc to Ctrl+c :)
 vim.keymap.set("n", "<leader>e", ":Ex<CR>", { silent = true, desc = "open netrw" })
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { silent = true })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true })
 vim.keymap.set("n", "<leader>s", ":w<CR>", { silent = true })
+vim.keymap.set("n", "<C-t>", "<cmd>tabnew<CR>", { desc = "mine - new tab", noremap = false })
 
 -- Zenmode
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>", { silent = true })
@@ -119,25 +132,3 @@ vim.keymap.set("n", "<Leader>t", ":vsplit | terminal<CR>i", { noremap = true })
 vim.keymap.set("n", "<leader>ft", function()
   require("conform").format()
 end, { noremap = true, silent = true, desc = "Format current buffer with conform" })
-
--- Better window navigation
-local keymap = vim.keymap.set
-local opts = { noremap = true, silent = true }
-
-keymap("n", "<m-h>", "<C-w>h", opts)
-keymap("n", "<m-j>", "<C-w>j", opts)
-keymap("n", "<m-k>", "<C-w>k", opts)
-keymap("n", "<m-l>", "<C-w>l", opts)
-
--- Stay in indent mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
-
--- windows
-vim.keymap.set("n", "<C-w>z", "<cmd>WindowsMaximize<CR>")
-vim.keymap.set("n", "<C-w>_", "<cmd>WindowsMaximizeVertically<CR>")
-vim.keymap.set("n", "<C-w>|", "<cmd>WindowsMaximizeHorizontally<CR>")
-vim.keymap.set("n", "<C-w>=", "<cmd>WindowsEqualize<CR>")
-
--- tab
-vim.keymap.set("n", "<C-t>", "<cmd>tabnew<CR>", { desc = "mine - new tab", noremap = false })
