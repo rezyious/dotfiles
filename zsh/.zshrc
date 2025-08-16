@@ -1,3 +1,11 @@
+export ZSH="$HOME/.oh-my-zsh"
+ zstyle ':omz:update' mode disabled  # disable automatic updates
+plugins=(git rust)
+
+source $ZSH/oh-my-zsh.sh
+
+################################################################################
+# my config
 # vim motions
 bindkey -v
 
@@ -21,6 +29,7 @@ alias sus="systemctl suspend"
 alias nv="nvim"
 alias dot="cd ~/.dotfiles"
 alias code="cd ~/git/code"
+alias note="cd ~/notes"
 export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
