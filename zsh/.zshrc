@@ -1,17 +1,3 @@
-# Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-zstyle ':omz:update' mode disabled  # disable automatic updates
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-plugins=(git rust)
-
-source $ZSH/oh-my-zsh.sh
-
-###################################################
-# my conf
-
 # vim motions
 bindkey -v
 
