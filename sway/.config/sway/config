@@ -1,6 +1,8 @@
 # for obs
 exec --no-startup-id /usr/libexec/xdg-desktop-portal-wlr
 
+# exec_always --no-startup-id export GTK_THEME=Nordic
+
 set $mod Mod4
 set $left h
 set $down j
@@ -165,13 +167,6 @@ bindsym Mod4+Ctrl+p  exec shotman --capture output
 
 # suspend
 bindsym Mod4+Shift+s exec systemctl suspend
-
-
-set $gnome_theme Adwaita-dark
-exec_always {
-    export GTK_THEME=$gnome_theme
-    export QT_QPA_PLATFORMTHEME=gtk2
-}
 
 include /etc/sway/config.d/*
 

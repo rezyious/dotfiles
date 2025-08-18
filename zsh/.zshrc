@@ -36,7 +36,7 @@ export PAGER=less
 export MANPAGER=less
 
 # proxy
-alias prx="proxychains -q -f ~/.dotfiles/proxychains.conf"
+alias prx="proxychains -q -f ~/.dotfiles/configs/proxychains.conf"
 
 #fzf
 alias fzfv='fzf --bind "ctrl-o:execute(vlc {})"'  
