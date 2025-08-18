@@ -2,6 +2,7 @@
 exec --no-startup-id /usr/libexec/xdg-desktop-portal-wlr
 
 # exec_always --no-startup-id export GTK_THEME=Nordic
+# exec_always --no-startup-id export GTK_ICON_THEME=silver
 
 set $mod Mod4
 set $left h
@@ -161,9 +162,8 @@ bindsym Ctrl+F1 exec swaymsg input type:keyboard xkb_layout us
 bindsym Ctrl+F2 exec swaymsg input type:keyboard xkb_layout ir
 
 # shotman
-bindsym Mod4+p       exec shotman --capture window
-bindsym Mod4+Shift+p exec shotman --capture region
-bindsym Mod4+Ctrl+p  exec shotman --capture output
+bindsym Mod4+p       exec ~/bin/shotman --capture window
+bindsym Mod4+Shift+p exec ~/bin/shotman --capture region
 
 # suspend
 bindsym Mod4+Shift+s exec systemctl suspend
