@@ -8,10 +8,7 @@ return {
         css = { "prettier" },
         html = { "prettier" },
         json = { "prettier" },
-        python = { "autopep8" },
         rust = { "rustfmt" },
-        go = { "gofmt" },
-        c = { "clang-format" },
       },
     })
   end,
