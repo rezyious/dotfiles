@@ -1,24 +1,38 @@
 # starship
 curl -sS https://starship.rs/install.sh | sh
 
+# tmux and zsh
 tpm
 ohmyzsh
 
 # packages
-neovim git tmux p7zip bat bind blanket brightnessctl btop dysk evince fd 
-ffmpegthumbnailer firefox fzf ghostty  htop  lsd man-db man-pages nautilus ncdu  
-network-manager-applet networkmanager qbittorrent ripgrep  
-pavucontrol proxychains-ng kdenlive stow vlc tree wget curl wl-clipboard sway swaybg 
-swayidle swaylock traceroute unrar waybar wofi  xdg-desktop-portal-gnome 
-xdg-desktop-portal-wlr xterm yazi yelp zoxide zsh ffmpeg tokei slurp vlc-plugins-all 
-nsxiv wmenu noto-fonts-cjk tokei lxappearance
+neovim git zsh stow tmux firefox ghostty waybar wofi
+sway swaybg swayidle swaylock brightnessctl
+xdg-desktop-portal-gnome xdg-desktop-portal-wlr 
+pavucontrol network-manager-applet networkmanager
+bat p7zip fzf wl-clipboard wmenu
+ffmpeg ffmpegthumbnailer vlc vlc-plugins-all 
+dysk btop ncdu unrar htop man-db man-pages
+fd ripgrep tokei evince nsxiv
+lxappearance  papirus-icon-theme
+nautilus yazi
+qbittorrent proxychains-ng
+bind blanket tree wget curl    
+traceroute
+zoxide slurp 
+kdenlive      
+noto-fonts noto-fonts-cjk noto-fonts-emoji
 
 
 # yay
-# screenshot depends on slurp
-shotman
 brave-bin freedownloadmanager 
 
+# screenshot 
+shotman -- depends on slurp
+repo:
+https://git.sr.ht/~whynothugo/shotman
+
+------------------------------------------------------------
 
 # Theme
 # gtk-theme stuff - use get to get the current
