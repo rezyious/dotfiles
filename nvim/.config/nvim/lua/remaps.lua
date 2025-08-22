@@ -6,6 +6,7 @@ vim.keymap.set("n", "<leader>fb", builtin_telescope.buffers, { desc = "Telescope
 vim.keymap.set("n", "<leader>fh", builtin_telescope.help_tags, { desc = "Telescope help tags" })
 vim.keymap.set("n", "<leader>fz", builtin_telescope.current_buffer_fuzzy_find, { desc = "Telescope fuzzyfinder" })
 vim.keymap.set("n", "<leader>fk", builtin_telescope.keymaps, { desc = "Telescope show keymaps" })
+vim.keymap.set("n", "<leader>fn", "<CMD>Telescope notify<CR>", { desc = "Telescope notify" })
 -- }}}
 
 -- {{{ LSP

@@ -24,6 +24,7 @@ kdenlive
 noto-fonts noto-fonts-cjk noto-fonts-emoji
 
 
+################################################################################
 # yay
 brave-bin freedownloadmanager 
 
