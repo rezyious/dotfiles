@@ -1,5 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
- zstyle ':omz:update' mode disabled  # disable automatic updates
+zstyle ':omz:update' mode disabled  # disable automatic updates
 plugins=(git rust)
 
 source $ZSH/oh-my-zsh.sh
