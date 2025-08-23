@@ -25,6 +25,7 @@ noto-fonts noto-fonts-cjk noto-fonts-emoji
 
 
 ################################################################################
+
 # yay
 brave-bin freedownloadmanager 
 
@@ -33,37 +34,4 @@ shotman -- depends on slurp
 repo:
 https://git.sr.ht/~whynothugo/shotman
 
-------------------------------------------------------------
 
-# Theme
-# gtk-theme stuff - use get to get the current
-# colorscheme
-gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
-
-# Theme
-gsettings set org.gnome.desktop.interface gtk-theme 'Nordic'
-
-# wm
-gsettings set org.gnome.desktop.wm.preferences theme "Nordic"
-
-# or in ~/.config/gtk-4.0/settings.ini  also for gtk-3.0
-[Settings]
-gtk-application-prefer-dark-theme=true
-gtk-theme-name=Nordic
-
-# Set Environment Variables (Optional)
-If the theme doesn't apply correctly, you can set the GTK_THEME environment variable to force the theme.
-Add the following to your Sway configuration file (~/.config/sway/config):
-
-exec_always --no-startup-id export GTK_THEME=Adwaita-dark
-
-# Icons - in ~/.config/gtk-4.0/settings.ini
-[Settings]
-gtk-icon-theme-name=Papirus
-
-# for icons in sway config file
-exec_always --no-startup-id export GTK_ICON_THEME=Papirus
-
-# disable recent files in nautilus
-gsettings set org.gnome.desktop.privacy remember-recent-files false
