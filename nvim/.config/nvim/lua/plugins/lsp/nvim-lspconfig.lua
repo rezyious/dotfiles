@@ -10,19 +10,7 @@ return {
       capabilities = capabilities,
     })
 
-    -- css
-    lspconfig.cssls.setup({
-      autostart = false,
-      capabilities = capabilities,
-    })
-
-    -- emmet
-    lspconfig.emmet_ls.setup({
-      autostart = false,
-      capabilities = capabilities,
-    })
-
-    -- {{{ Rust
+    -- _: {{{ Rust
     lspconfig.rust_analyzer.setup({
       capabilities = capabilities,
       autostart = false,

@@ -1,3 +1,5 @@
+-- _: remaps
+
 -- {{{ Telescope
 local builtin_telescope = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin_telescope.find_files, { desc = "Telescope find files" })
@@ -6,7 +8,6 @@ vim.keymap.set("n", "<leader>fb", builtin_telescope.buffers, { desc = "Telescope
 vim.keymap.set("n", "<leader>fh", builtin_telescope.help_tags, { desc = "Telescope help tags" })
 vim.keymap.set("n", "<leader>fz", builtin_telescope.current_buffer_fuzzy_find, { desc = "Telescope fuzzyfinder" })
 vim.keymap.set("n", "<leader>fk", builtin_telescope.keymaps, { desc = "Telescope show keymaps" })
-vim.keymap.set("n", "<leader>fn", "<CMD>Telescope notify<CR>", { desc = "Telescope notify" })
 -- }}}
 
 -- {{{ LSP
@@ -96,12 +97,6 @@ vim.keymap.set(
   { noremap = true, silent = true, desc = "rust -  #[rustfmt::skip]" }
 )
 
-vim.keymap.set(
-  "n",
-  "<leader>rs",
-  "<cmd>LspStart rust_analyzer<CR>",
-  { noremap = true, silent = true, desc = "rust -  start rust analyzer" }
-)
 -- }}}
 
 -- {{{ Better window navigation
