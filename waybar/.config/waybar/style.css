@@ -86,13 +86,13 @@ window#waybar {
 #clock {
   margin: 0px 16px 0px 10px;
   min-width: 140px;
-  color: #bb9af7;
+  color: #fffff7;
   font-weight: bold;
 }
 
 #custom-power {
   font-size: 20px;
-  color: #bb9af7;
+  color: #fffaf7;
   font-weight: bold;
 }
 
