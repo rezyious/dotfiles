@@ -4,6 +4,12 @@ return {
     local lspconfig = require("lspconfig")
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+    -- C
+    lspconfig.clangd.setup({
+      autostart = false,
+      capabilities = capabilities,
+    })
+
     -- typescript
     lspconfig.ts_ls.setup({
       autostart = false,

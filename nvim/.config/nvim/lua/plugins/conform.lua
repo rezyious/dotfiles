@@ -9,6 +9,7 @@ return {
         html = { "prettier" },
         json = { "prettier" },
         rust = { "rustfmt" },
+        c = { "clang-format" },
       },
     })
   end,
