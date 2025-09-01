@@ -9,7 +9,7 @@ return {
         comments = { italic = false },
         keywords = { italic = false },
       },
-      transparent = true,
+      transparent = false,
 
       -- "hint" color to the "orange" color, the "error" color bright red
       on_colors = function(colors)

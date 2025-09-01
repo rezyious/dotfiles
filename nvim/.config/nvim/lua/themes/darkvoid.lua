@@ -4,7 +4,7 @@ return {
   priority = 1000,
   config = function()
     require("darkvoid").setup({
-      transparent = true,
+      transparent = false,
       colors = {
         fg = "#c0c0c0",
         bg = "#1c1c1c",
