@@ -4,8 +4,8 @@
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": ["clock"],
-    "modules-right": ["sway/scratchpad","tray", "pulseaudio", "temperature", "cpu", "memory", "battery",
-    "network","custom/power"],
+    // "modules-right": ["sway/scratchpad","tray", "pulseaudio", "temperature", "cpu", "memory", "battery",
+    "modules-right": ["sway/scratchpad","tray", "pulseaudio", "temperature",  "battery", "network","custom/power"],
     "sway/mode": {
         "format": " {}"
     },
