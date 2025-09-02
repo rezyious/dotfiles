@@ -6,7 +6,7 @@ tpm
 ohmyzsh
 
 # packages
-neovim git zsh stow tmux firefox ghostty waybar wofi
+neovim git zsh stow tmux firefox ghostty waybar wofi chromium 
 sway swaybg swayidle swaylock brightnessctl
 xdg-desktop-portal-gnome xdg-desktop-portal-wlr 
 pavucontrol network-manager-applet networkmanager
