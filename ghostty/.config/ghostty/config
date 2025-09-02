@@ -1,7 +1,7 @@
 font-family = "Iosevka Nerd Font Mono"
 font-size = 14
 theme = tokyonight_night
-background-opacity = 0.9
+# background-opacity = 0.9
 mouse-hide-while-typing = true
 
 window-padding-x = 0
