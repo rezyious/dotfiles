@@ -27,6 +27,10 @@ vim.opt.incsearch = true
 vim.opt.fillchars:append({ eob = " " })
 vim.opt.termguicolors = true
 vim.o.mousemoveevent = true
+-- vim.opt.guicursor = {
+--   "i-v:ver90",
+--   "n:ver40",
+-- }
 
 -- show diagnostics instead of just hinting
 vim.diagnostic.config({
