@@ -6,20 +6,20 @@ return {
 
     -- C
     lspconfig.clangd.setup({
-      autostart = false,
+      -- autostart = false,
       capabilities = capabilities,
     })
 
     -- typescript
     lspconfig.ts_ls.setup({
-      autostart = false,
+      -- autostart = false,
       capabilities = capabilities,
     })
 
     -- _: {{{ Rust
     lspconfig.rust_analyzer.setup({
       capabilities = capabilities,
-      autostart = false,
+      -- autostart = false,
       settings = {
         ["rust-analyzer"] = {
           standalone = true,
