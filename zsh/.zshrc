@@ -28,8 +28,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=green,bold'
 alias sus="systemctl suspend"
 alias nv="nvim"
 alias dot="cd ~/.dotfiles"
-alias code="cd ~/git/code"
-alias note="cd ~/notes"
 export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
@@ -37,6 +35,9 @@ export MANPAGER=less
 
 # proxy
 alias prx="proxychains -q -f ~/.dotfiles/configs/proxychains.conf"
+
+# yt-dlp
+alias yt="yt-dlp --config-location ~/.dotfiles/configs/yt-dlp.conf"
 
 #fzf
 alias fzfv='fzf --bind "ctrl-o:execute(vlc {})"'  
