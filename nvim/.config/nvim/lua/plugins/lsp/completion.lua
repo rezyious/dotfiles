@@ -21,7 +21,7 @@ return {
 
       -- Main completion
       cmp.setup({
-        enabled = true,
+        enabled = false,
 
         mapping = cmp.mapping.preset.insert({
           ["<C-b>"] = cmp.mapping.scroll_docs(-4),
