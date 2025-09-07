@@ -10,7 +10,7 @@ neovim git zsh stow tmux firefox ghostty waybar wofi chromium
 sway swaybg swayidle swaylock brightnessctl
 xdg-desktop-portal-gnome xdg-desktop-portal-wlr 
 pavucontrol network-manager-applet networkmanager
-bat p7zip fzf wl-clipboard wmenu
+bat p7zip fzf wl-clipboard wmenu tldr
 ffmpeg ffmpegthumbnailer vlc vlc-plugins-all mpv
 dysk btop ncdu unrar htop man-db man-pages
 fd ripgrep tokei evince nsxiv mpv loupe
