@@ -1,5 +1,4 @@
 return {
-  { "hrsh7th/cmp-nvim-lsp" },
   {
     "L3MON4D3/LuaSnip",
     dependencies = {
@@ -10,15 +9,18 @@ return {
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
       "hrsh7th/cmp-cmdline",
+      "saadparwaiz1/cmp_luasnip",
     },
     config = function()
       local cmp = require("cmp")
       require("luasnip.loaders.from_vscode").lazy_load()
 
+      -- Main completion
       cmp.setup({
-
         enabled = true,
 
         mapping = cmp.mapping.preset.insert({
@@ -35,18 +37,13 @@ return {
         },
         sources = cmp.config.sources({
           { name = "buffer" },
-          { name = "nvim_lsp" },
           { name = "luasnip" },
-        }, {
-          { name = "buffer" },
+          { name = "nvim_lsp" },
+          { name = "path" },
         }),
       })
-    end,
-  },
-  {
-    "hrsh7th/cmp-cmdline",
-    config = function()
-      local cmp = require("cmp")
+
+      -- Cmdline completion (:)
       cmp.setup.cmdline(":", {
         mapping = cmp.mapping.preset.cmdline(),
         sources = cmp.config.sources({
@@ -54,31 +51,8 @@ return {
         }, {
           {
             name = "cmdline",
-            option = {
-              ignore_cmds = { "Man", "!" },
-            },
+            option = { ignore_cmds = { "Man", "!" } },
           },
-        }),
-      })
-    end,
-  },
-  {
-    "hrsh7th/cmp-path",
-    config = function()
-      local cmp = require("cmp")
-      cmp.setup({
-        sources = cmp.config.sources({
-          { name = "nvim_lsp" },
-          {
-            name = "path",
-            option = {
-              pathMappings = {
-                ["@"] = "${folder}/src",
-              },
-            },
-          },
-          { name = "buffer" },
-          { name = "luasnip" },
         }),
       })
     end,
