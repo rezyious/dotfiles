@@ -4,4 +4,4 @@ require("config.lazy")
 
 require("remaps")
 
-vim.cmd("colorscheme cyberdream")
+vim.cmd("colorscheme monochrome")

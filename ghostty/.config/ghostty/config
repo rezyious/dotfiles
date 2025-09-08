@@ -1,6 +1,6 @@
 font-family = "Iosevka Nerd Font Mono"
 font-size = 14
-theme = tokyonight_night
+theme = Arthur
 # background-opacity = 0.9
 mouse-hide-while-typing = true
 cursor-style = bar
