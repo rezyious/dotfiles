@@ -128,3 +128,12 @@ vim.keymap.set("n", "<Leader>t", ":vsplit | terminal<CR>i", { noremap = true })
 vim.keymap.set("n", "<leader>ft", function()
   require("conform").format()
 end, { noremap = true, silent = true, desc = "Format current buffer with conform" })
+
+-- Neogit
+vim.keymap.set("n", "<leader>ng", ":Neogit kind=vsplit<CR>", { silent = true, noremap = true, desc = "open neogit" })
+vim.keymap.set(
+  "n",
+  "<leader>ngc",
+  ":Neogit cwd=%:p:h  kind=vsplit<CR>",
+  { silent = true, noremap = true, desc = "open neogit for current file" }
+)
