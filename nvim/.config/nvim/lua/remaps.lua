@@ -128,6 +128,3 @@ vim.keymap.set("n", "<Leader>t", ":vsplit | terminal<CR>i", { noremap = true })
 vim.keymap.set("n", "<leader>ft", function()
   require("conform").format()
 end, { noremap = true, silent = true, desc = "Format current buffer with conform" })
-
--- fugitive
-vim.keymap.set("n", "<Leader>g", vim.cmd.Git, { noremap = true, desc = "fugitive" })
