@@ -1,9 +1,11 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.opt.expandtab = true
-vim.opt.smarttab = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
+vim.opt.autoindent = false
+vim.opt.smartindent = false
+vim.opt.cindent = false
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.mouse = "a"
@@ -15,7 +17,6 @@ vim.o.textwidth = 120
 vim.o.wrap = true
 vim.o.linebreak = true
 vim.o.colorcolumn = "120"
-vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#ffffff" })
 vim.opt.clipboard = "unnamedplus"
 vim.opt.shortmess:append("I")
 vim.opt.signcolumn = "yes"
@@ -26,7 +27,6 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.fillchars:append({ eob = " " })
 vim.opt.termguicolors = true
-vim.o.mousemoveevent = true
 
 -- show diagnostics instead of just hinting
 vim.diagnostic.config({
