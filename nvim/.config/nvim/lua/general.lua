@@ -13,15 +13,15 @@ vim.opt.showmode = false
 vim.opt.swapfile = false
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
-vim.o.textwidth = 120
-vim.o.wrap = true
-vim.o.linebreak = true
-vim.o.colorcolumn = "120"
+vim.opt.textwidth = 120
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.colorcolumn = "120"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.shortmess:append("I")
 vim.opt.signcolumn = "yes"
-vim.o.foldmethod = "marker"
-vim.o.foldmarker = "{{{,}}}"
+vim.opt.foldmethod = "marker"
+vim.opt.foldmarker = "{{{,}}}"
 vim.g.netrw_banner = 0
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
@@ -50,6 +50,15 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     require("conform").format({ bufnr = args.buf })
   end,
 })
+
+function SetColorColumn()
+  vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#ffffff" })
+  vim.cmd("set colorcolumn=120")
+end
+
+function DisableColorColumn()
+  vim.cmd("set colorcolumn=0")
+end
 
 -- transparent background function
 function Nobg()
