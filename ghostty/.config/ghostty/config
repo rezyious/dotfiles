@@ -9,4 +9,5 @@ window-padding-y = 0
 window-padding-balance = true
 
 # set background color
-# background = #1e1e2e
+background = #000000
+
