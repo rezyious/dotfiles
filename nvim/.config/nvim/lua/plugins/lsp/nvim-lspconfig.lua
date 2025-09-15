@@ -4,6 +4,24 @@ return {
     local lspconfig = require("lspconfig")
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+    -- python
+    lspconfig.pylsp.setup({
+      -- autostart = false,
+      capabilities = capabilities,
+    })
+
+    -- css
+    lspconfig.cssls.setup({
+      -- autostart = false,
+      capabilities = capabilities,
+    })
+
+    -- emmet
+    lspconfig.emmet_ls.setup({
+      -- autostart = false,
+      capabilities = capabilities,
+    })
+
     -- C
     lspconfig.clangd.setup({
       -- autostart = false,
@@ -16,7 +34,7 @@ return {
       capabilities = capabilities,
     })
 
-    -- _: {{{ Rust
+    --  Rust
     lspconfig.rust_analyzer.setup({
       capabilities = capabilities,
       -- autostart = false,
@@ -41,6 +59,5 @@ return {
         },
       },
     })
-    -- }}}
   end,
 }

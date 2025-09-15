@@ -96,3 +96,12 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.formatoptions:remove("o")
   end,
 })
+
+-- emmet
+vim.api.nvim_create_user_command("LspStartEmmet", function()
+  vim.lsp.start({
+    name = "emmet_ls",
+    cmd = { "emmet-ls", "--stdio" },
+    root_dir = vim.fn.getcwd(), -- or use lspconfig.util.root_pattern if you prefer
+  })
+end, {})
