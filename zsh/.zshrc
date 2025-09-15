@@ -1,6 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 zstyle ':omz:update' mode disabled  # disable automatic updates
 plugins=(git rust)
+ZSH_THEME=mh
 
 source $ZSH/oh-my-zsh.sh
 
@@ -47,9 +48,4 @@ alias fzf='fzf --bind "ctrl-o:execute(nvim {})"'
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/bin
 
-# starship config location
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
-
-# starship
-eval "$(starship init zsh)"
 

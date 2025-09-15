@@ -12,8 +12,8 @@ local colors = {
 local bubbles_theme = {
   normal = {
     a = { fg = colors.white, bg = colors.dark_grey },
-    b = { fg = colors.white, bg = colors.grey },
-    c = { fg = colors.white },
+    b = { fg = colors.white, bg = colors.dark_grey },
+    c = { fg = colors.white, bg = colors.dark_grey },
   },
 
   insert = { a = { fg = colors.black, bg = colors.blue } },
@@ -23,12 +23,11 @@ local bubbles_theme = {
   inactive = {
     a = { fg = colors.white, bg = colors.black },
     b = { fg = colors.white, bg = colors.black },
-    c = { fg = colors.white },
+    c = { fg = colors.grey, bg = colors.dark_grey },
   },
 }
 return {
   "nvim-lualine/lualine.nvim",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     require("lualine").setup({
       options = {
@@ -40,8 +39,8 @@ return {
         lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
         lualine_b = { "filename", "branch" },
         lualine_c = { "lsp_status" },
-        lualine_x = { "filesize" },
-        lualine_y = { "filetype", "progress" },
+        lualine_x = {},
+        lualine_y = {},
         lualine_z = {
           { "location", separator = { right = "" }, left_padding = 2 },
         },
