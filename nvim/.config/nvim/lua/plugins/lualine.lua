@@ -11,12 +11,12 @@ local colors = {
 
 local bubbles_theme = {
   normal = {
-    a = { fg = colors.white, bg = colors.dark_grey },
-    b = { fg = colors.white, bg = colors.dark_grey },
-    c = { fg = colors.white, bg = colors.dark_grey },
+    a = { fg = colors.white, bg = colors.black },
+    b = { fg = colors.white, bg = colors.black },
+    c = { fg = colors.white, bg = colors.black },
   },
 
-  insert = { a = { fg = colors.black, bg = colors.blue } },
+  insert = { a = { fg = colors.black, bg = colors.white } },
   visual = { a = { fg = colors.black, bg = colors.cyan } },
   replace = { a = { fg = colors.black, bg = colors.red } },
 
