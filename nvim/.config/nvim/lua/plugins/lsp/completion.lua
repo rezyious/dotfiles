@@ -19,40 +19,9 @@ return {
       local cmp = require("cmp")
       require("luasnip.loaders.from_vscode").lazy_load()
 
-      -- {{{ kinf_icons
-      local kind_icons = {
-        Text = "",
-        Method = "󰆧",
-        Function = "󰊕",
-        Constructor = "",
-        Field = "󰇽",
-        Variable = "󰂡",
-        Class = "󰠱",
-        Interface = "",
-        Module = "",
-        Property = "󰜢",
-        Unit = "",
-        Value = "󰎠",
-        Enum = "",
-        Keyword = "󰌋",
-        Snippet = "",
-        Color = "󰏘",
-        File = "󰈙",
-        Reference = "󰈇",
-        Folder = "󰉋",
-        EnumMember = "",
-        Constant = "󰏿",
-        Struct = "",
-        Event = "",
-        Operator = "󰆕",
-        TypeParameter = "󰅲",
-      }
-
-      -- }}}
-
       -- Main completion
       cmp.setup({
-        enabled = true,
+        enabled = false,
 
         window = {
           documentation = cmp.config.disable, -- disables docs window
@@ -80,9 +49,9 @@ return {
         },
 
         sources = cmp.config.sources({
-          { name = "buffer" },
-          { name = "luasnip" },
           { name = "nvim_lsp" },
+          { name = "luasnip" },
+          { name = "buffer" },
           { name = "path" },
         }),
       })

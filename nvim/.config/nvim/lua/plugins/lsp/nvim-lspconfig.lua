@@ -1,63 +1,39 @@
 return {
   "neovim/nvim-lspconfig",
   config = function()
-    local lspconfig = require("lspconfig")
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-    -- python
-    lspconfig.pylsp.setup({
-      -- autostart = false,
+    -- defaults for all servers
+    vim.lsp.config("*", {
       capabilities = capabilities,
     })
 
-    -- css
-    lspconfig.cssls.setup({
-      -- autostart = false,
-      capabilities = capabilities,
-    })
-
-    -- emmet
-    lspconfig.emmet_ls.setup({
-      -- autostart = false,
-      capabilities = capabilities,
-    })
-
-    -- C
-    lspconfig.clangd.setup({
-      -- autostart = false,
-      capabilities = capabilities,
-    })
-
-    -- typescript
-    lspconfig.ts_ls.setup({
-      -- autostart = false,
-      capabilities = capabilities,
-    })
-
-    --  Rust
-    lspconfig.rust_analyzer.setup({
-      capabilities = capabilities,
-      -- autostart = false,
+    -- server-specific (only Rust here, since you had custom settings)
+    vim.lsp.config("rust_analyzer", {
       settings = {
         ["rust-analyzer"] = {
           standalone = true,
           imports = {
-            granularity = {
-              group = "module",
-            },
+            granularity = { group = "module" },
             prefix = "self",
           },
           cargo = {
             autoload = true,
-            buildScripts = {
-              enable = true,
-            },
+            buildScripts = { enable = true },
           },
-          procMacro = {
-            enable = true,
-          },
+          procMacro = { enable = true },
         },
       },
     })
+
+    -- enable all servers
+    -- vim.lsp.enable({
+    --   "pylsp",
+    --   "cssls",
+    --   "emmet_ls",
+    --   "clangd",
+    --   "tsserver",
+    --   "rust_analyzer",
+    -- })
   end,
 }
