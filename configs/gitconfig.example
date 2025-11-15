@@ -1,0 +1,17 @@
+[user]
+	name = rezyious
+	email = 46368620+rezyious@users.noreply.github.com
+[alias]
+	s = status
+	ss = status --short
+	lg = log --oneline --all
+	lgg = log --oneline --all --graph
+[init]
+	defaultBranch = main
+[diff]
+	tool = nvimdiff
+[core]
+	pager = cat
+	editor = nvim
+[merge]
+	tool = nvimdiff
