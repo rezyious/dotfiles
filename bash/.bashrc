@@ -113,6 +113,10 @@ fi
 
 . "$HOME/.cargo/env"
 
+# vi mode
+set -o vi
+# set -o emacs  # default emacs mode
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
@@ -131,3 +135,5 @@ alias dot="cd $HOME/.dotfiles/"
 alias src="source ~/.bashrc"
 alias ll="ls -lah --color=auto"
 alias path="echo $PATH | tr \":\" \"\n\" "
+
+pp="--proxy=127.0.0.1:10808"

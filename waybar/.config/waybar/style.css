@@ -18,7 +18,7 @@ window#waybar {
   text-shadow: none;
   transition-duration: 0s;
   color: rgba(217, 216, 216, 1);
-  background: #282828;
+  background: #1a1b26;
 }
 
 #workspaces {
@@ -83,7 +83,7 @@ window#waybar {
 #clock {
   margin: 0px 16px 0px 10px;
   min-width: 140px;
-  color: #fffff7;
+  color: #7aa2f7;
   font-weight: bold;
 }
 

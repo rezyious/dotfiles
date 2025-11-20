@@ -3,6 +3,7 @@ return {
   config = function()
     require("mason-lspconfig").setup({
       ensure_installed = {
+        "lua_ls",
         "pylsp",
         "emmet_ls",
         "cssls",

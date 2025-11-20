@@ -22,7 +22,7 @@ return {
 
       -- Main completion
       cmp.setup({
-        enabled = false,
+        enabled = true,
 
         window = {
           documentation = cmp.config.disable, -- disables docs window

@@ -3,4 +3,4 @@ require("config.lazy")
 require("remaps")
 require("autocmds")
 
-vim.cmd("colorscheme vscode")
+vim.cmd("colorscheme tokyonight")

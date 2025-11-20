@@ -26,15 +26,16 @@ return {
     })
 
     -- enable all servers
-    -- vim.lsp.enable({
-    --   "pylsp",
-    --   "cssls",
-    --   "emmet_ls",
-    --   "clangd",
-    --   "tsserver",
-    --   "rust_analyzer",
-    --   "bashls",
-    --   "gopls",
-    -- })
+    vim.lsp.enable({
+      "lua_ls",
+      "pylsp",
+      "cssls",
+      "emmet_ls",
+      "clangd",
+      "tsserver",
+      "rust_analyzer",
+      "bashls",
+      "gopls",
+    })
   end,
 }
