@@ -1,6 +1,6 @@
 font-family = "Iosevka NFM"
 font-size = 18
-theme = "Gruvbox Dark"
+theme = "TokyoNight Moon"
 background-opacity = 0.9
 mouse-hide-while-typing = true
 #cursor-style = bar

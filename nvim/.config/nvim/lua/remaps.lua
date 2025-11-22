@@ -66,6 +66,10 @@ vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { silent = true })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true })
 vim.keymap.set("n", "<leader>s", ":w<CR>", { silent = true })
 vim.keymap.set("n", "<C-t>", "<cmd>tabnew<CR>", { desc = "mine - new tab", noremap = false })
+vim.keymap.set("n", "<leader>t", function()
+  vim.cmd("terminal")
+  vim.cmd("startinsert")
+end)
 
 -- format current buffer with conform
 vim.keymap.set("n", "<leader>ft", function()

@@ -114,8 +114,8 @@ fi
 . "$HOME/.cargo/env"
 
 # vi mode
-set -o vi
-# set -o emacs  # default emacs mode
+# set -o vi
+set -o emacs # default emacs mode
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
