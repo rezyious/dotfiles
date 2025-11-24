@@ -23,7 +23,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.foldmethod = "marker"
 vim.opt.foldmarker = "#-,-#"
 vim.g.netrw_banner = 0
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.opt.fillchars:append({ eob = " " })
 vim.opt.termguicolors = true
@@ -44,12 +44,12 @@ vim.diagnostic.config({
 })
 
 -- format on save
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*",
-  callback = function(args)
-    require("conform").format({ bufnr = args.buf })
-  end,
-})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = "*",
+--   callback = function(args)
+--     require("conform").format({ bufnr = args.buf })
+--   end,
+-- })
 
 -- Comments continuation
 -- Enable 'r' (continue comments on Enter) only in insert mode
