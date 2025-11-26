@@ -4,7 +4,7 @@ return {
   opts = {
     keywords = {
       FIX = { icon = " ", color = "#DC2626" },
-      NOTE = { icon = " ", color = "#2563EB" },
+      NOTE = { icon = " ", color = "#00f123" },
     },
   },
 }
