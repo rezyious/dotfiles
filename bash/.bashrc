@@ -137,3 +137,6 @@ alias ll="ls -lah --color=auto"
 alias path="echo $PATH | tr \":\" \"\n\" "
 
 pp="--proxy=127.0.0.1:10808"
+
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+eval "$(starship init bash)"
