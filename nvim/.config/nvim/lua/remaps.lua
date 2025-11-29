@@ -56,10 +56,26 @@ vim.keymap.set("n", "<m-k>", "<C-w>k", { noremap = true, silent = true })
 vim.keymap.set("n", "<m-l>", "<C-w>l", { noremap = true, silent = true })
 -- -#
 
---  Stay in indent mode
+-- #- Stay in indent mode
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
+-- -#
 
+-- #- debugger
+vim.keymap.set("n", "<F5>", require("dap").continue, { noremap = true, silent = true, desc = "dap continue" })
+vim.keymap.set("n", "<F10>", require("dap").step_over, { noremap = true, silent = true, desc = "dap step over" })
+vim.keymap.set("n", "<F11>", require("dap").step_into, { noremap = true, silent = true, desc = "dap step into" })
+vim.keymap.set("n", "<F12>", require("dap").step_out, { noremap = true, silent = true, desc = "dap step out" })
+vim.keymap.set(
+  "n",
+  "<leader>b",
+  require("dap").toggle_breakpoint,
+  { noremap = true, silent = true, desc = "dap toggle break point" }
+)
+vim.keymap.set("n", "<leader>dg", require("dap").terminate, { noremap = true, silent = true, desc = "dap terminate" })
+-- -#
+
+-- personal
 vim.keymap.set("i", "<C-c>", "<Esc>", { noremap = true }) -- rempa Esc to Ctrl+c :)
 vim.keymap.set("n", "<leader>e", ":Ex<CR>", { silent = true, desc = "open netrw" })
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { silent = true })

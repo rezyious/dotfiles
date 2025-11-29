@@ -17,6 +17,9 @@ git stow tmux firefox chromium wget curl proxychains-ng
 # gcc
 # make sure gcc and make and build-essentials are installed
 
+# debugger
+lldb
+
 # neovim
 # download from github and build
 
