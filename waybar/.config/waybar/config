@@ -1,0 +1,90 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "modules-left": ["sway/workspaces", "sway/mode", "tray","sway/scratchpad" ],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "temperature", "memory", "battery", "custom/power"],
+
+    "sway/mode": {
+        "format": " {}"
+    },
+
+    "sway/scratchpad": {
+        "format": "Scratchpad"
+    },
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "disable-markup": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1 ></span>",
+            "2": "2 ></span>",
+            "3": "3 ></span>",
+            "4": "4 ></span>",
+            "5": "5 ></span>",
+            "6": "6 ></span>",
+            "7": "7 ></span>",
+            "8": "8 ></span>",
+            "9": "9 ></span>",
+            "10": "0 ></span>"
+        }
+    },
+
+    "tray": {
+        "icon-size": 20,
+        "spacing": 8
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip": false,
+    },
+
+    "memory": {
+        "interval": 15,
+        "format": "{used:0.1f} GB",
+        "tooltip": false
+    },
+
+    "cpu": {
+        "tooltip":false
+    },
+
+
+    "battery": {
+                "states": {
+                        "warning": 30,
+                        "critical": 15
+                },
+                "format": "B: {capacity}%",
+                "format-charging": "CH: {capacity}%",
+                "format-plugged": "P {capacity}%",
+                "format-alt": "{time} {icon}",
+                "format-full": "F {capacity}%",
+        },
+
+
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 75,
+        "interval": 5,
+        "format": "{icon} {temperatureC}°",
+        "tooltip": false,
+        "format-icons": [
+            "", // Icon: temperature-empty
+            "", // Icon: temperature-quarter
+            "", // Icon: temperature-half
+            "", // Icon: temperature-three-quarters
+            ""  // Icon: temperature-full
+        ]
+    },
+
+    "custom/power": {
+    "format" : " ⏻ ",
+		"tooltip": false,
+		"on-click": "exec $HOME/.config/sway/power_off.sh", 
+    },
+}

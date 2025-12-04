@@ -1,0 +1,9 @@
+allow_images=false
+width=250
+height=100
+x=800
+insensitive=true
+mode=drun,run
+columns=1
+padding=2
+lines=10

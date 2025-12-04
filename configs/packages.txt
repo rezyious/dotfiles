@@ -1,0 +1,78 @@
+# packages
+
+# sway stuff
+xdg-desktop-portal-gnome xdg-desktop-portal-wlr xorg-xwayland
+sway swaybg swayidle swaylock brightnessctl
+ghostty waybar wofi wmenu
+pavucontrol network-manager-applet networkmanager
+
+# essentials
+git stow tmux firefox chromium wget curl proxychains-ng
+
+# languages
+# install node via nvm
+# golang
+# rust
+
+# gcc
+# make sure gcc and make and build-essentials are installed
+
+# debugger
+lldb
+
+# neovim
+# download from github and build
+
+# stuff for neovim
+7zip fzf wl-clipboard fd ripgrep
+
+# ffmpeg and vlc
+ffmpeg ffmpegthumbnailer vlc vlc-plugins-all 
+
+# utils
+dysk ncdu htop evince lsof nautilus exiftool tldr fastfetch tree
+
+# torrent and download manager
+qbittorrent 
+# download and install free download manager
+
+# network stuff
+bind traceroute
+
+# fonts
+noto-fonts noto-fonts-cjk noto-fonts-emoji
+
+# ntfs
+gvfs-mtp mtpfs ntfs-3g
+
+# tts stuff
+speech-dispatcher piper-tts-bin
+
+# battery info and status
+acpi
+
+################################################################################
+
+# set icon theme
+# icons are at /usr/share/icons
+gsettings set org.gnome.desktop.interface icon-theme Cosmic
+
+
+# get the gtk theme
+# themes are at /usr/share/themes
+# gsettings get org.gnome.desktop.interface gtk-theme
+gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
+
+# color-scheme
+gsettings get org.gnome.desktop.interface color-scheme
+# returns 'prefer-dark'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
+
+# screenshot - or just use package manger
+shotman -- depends on slurp
+repo:
+https://git.sr.ht/~whynothugo/shotman
+
+# m3u8 downloader
+cargo install vsd
