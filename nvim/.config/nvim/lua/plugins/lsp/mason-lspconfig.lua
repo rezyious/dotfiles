@@ -11,6 +11,7 @@ return {
         "rust_analyzer",
         "clangd",
         "bashls",
+        "gopls",
       },
       auto_install = true,
       automatic_enable = false,

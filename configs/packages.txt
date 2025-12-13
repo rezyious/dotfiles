@@ -5,6 +5,7 @@ xdg-desktop-portal-gnome xdg-desktop-portal-wlr xorg-xwayland
 sway swaybg swayidle swaylock brightnessctl
 ghostty waybar wofi wmenu
 pavucontrol network-manager-applet networkmanager
+gnome-characters gnome-calculator
 
 # essentials
 git stow tmux firefox chromium wget curl proxychains-ng kate

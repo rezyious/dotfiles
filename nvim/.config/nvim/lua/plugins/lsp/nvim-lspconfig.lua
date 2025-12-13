@@ -35,6 +35,7 @@ return {
     --   "tsserver",
     --   "rust_analyzer",
     --   "bashls",
+    --   "gopls",
     -- })
   end,
 }

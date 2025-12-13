@@ -111,16 +111,28 @@ if ! shopt -oq posix; then
     fi
 fi
 
+#cargo
 . "$HOME/.cargo/env"
+
+
+# pnpm
+export PNPM_HOME="/home/reza/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 
 # vi mode
 # set -o vi
 set -o emacs # default emacs mode
 
+# nvm - node
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
+# go
 export PATH=$PATH:/usr/local/go/bin
 
 export PATH="$HOME/bin:$PATH"
@@ -128,7 +140,7 @@ export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
 
-alias vi="nvim"
+alias v="nvim"
 alias prx="proxychains -q -f ~/.dotfiles/configs/proxychains.conf"
 alias yt="yt-dlp --config-location ~/.dotfiles/configs/yt-dlp.conf"
 alias dot="cd $HOME/.dotfiles/"
@@ -140,3 +152,4 @@ pp="--proxy=127.0.0.1:10808"
 
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init bash)"
+
