@@ -7,7 +7,7 @@ ghostty waybar wofi wmenu
 pavucontrol network-manager-applet networkmanager
 
 # essentials
-git stow tmux firefox chromium wget curl proxychains-ng
+git stow tmux firefox chromium wget curl proxychains-ng kate
 
 # languages
 # install node via nvm

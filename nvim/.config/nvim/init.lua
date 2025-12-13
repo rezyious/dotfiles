@@ -1,6 +1,6 @@
 require("general")
 require("config.lazy")
 require("remaps")
-require("autocmds")
+require("user_commands")
 
-vim.cmd("colorscheme tokyonight")
+vim.cmd("colorscheme monochrome")

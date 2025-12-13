@@ -1,15 +1,19 @@
--- black and white
-vim.api.nvim_create_user_command("BlackWhite", function()
-  vim.cmd("colorscheme black-and-white")
+-- Disable colors, syntax, and Tree-sitter highlighting
+vim.api.nvim_create_user_command("BWOn", function()
   vim.cmd("syntax off")
   vim.cmd("TSDisable highlight")
+  vim.cmd("colorscheme default")
+  vim.cmd([[
+    hi clear
+    set background=dark
+  ]])
 end, {})
 
--- disable black and white
-vim.api.nvim_create_user_command("BlackWhiteDisable", function()
-  vim.cmd("colorscheme vscode")
+-- Re-enable colors, syntax, and Tree-sitter highlighting
+vim.api.nvim_create_user_command("BWOff", function()
   vim.cmd("syntax on")
   vim.cmd("TSEnable highlight")
+  vim.cmd("colorscheme monochrome")
 end, {})
 
 -- functions
