@@ -7,8 +7,10 @@ ghostty waybar wofi wmenu
 pavucontrol network-manager-applet networkmanager
 gnome-characters gnome-calculator
 
+
 # essentials
 git stow tmux firefox chromium wget curl proxychains-ng kate
+man-pages mand-db
 
 # languages
 # install node via nvm
@@ -31,7 +33,7 @@ lldb
 ffmpeg ffmpegthumbnailer vlc vlc-plugins-all 
 
 # utils
-dysk ncdu htop evince lsof nautilus exiftool tldr fastfetch tree
+dysk ncdu htop evince lsof nautilus exiftool tldr fastfetch tree unrar
 
 # torrent and download manager
 qbittorrent 
@@ -53,6 +55,9 @@ speech-dispatcher piper-tts-bin
 acpi
 
 ################################################################################
+# set default browser
+xdg-settings get default-web-browser 
+xdg-settings set default-web-browser firefox.desktop 
 
 # set icon theme
 # icons are at /usr/share/icons

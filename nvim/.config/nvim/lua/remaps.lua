@@ -18,35 +18,35 @@ vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "LSP: go to d
 
 -- #- cmp
 vim.api.nvim_set_keymap(
-  "n",
-  "<leader>cd",
-  ":lua require('cmp').setup.buffer({ enabled = false })<CR>",
-  { noremap = true, silent = true, desc = "disable cmp" }
+    "n",
+    "<leader>cd",
+    ":lua require('cmp').setup.buffer({ enabled = false })<CR>",
+    { noremap = true, silent = true, desc = "disable cmp" }
 )
 
 vim.api.nvim_set_keymap(
-  "n",
-  "<leader>ce",
-  ":lua require('cmp').setup.buffer({ enabled = true })<CR>",
-  { noremap = true, silent = true, desc = "enable cmp" }
+    "n",
+    "<leader>ce",
+    ":lua require('cmp').setup.buffer({ enabled = true })<CR>",
+    { noremap = true, silent = true, desc = "enable cmp" }
 )
 -- -#
 
 -- #- harpoon
 vim.keymap.set("n", "<leader>hm", function()
-  require("harpoon.ui").toggle_quick_menu()
+    require("harpoon.ui").toggle_quick_menu()
 end, { desc = "Toggle Harpoon quick menu" })
 
 vim.keymap.set("n", "<leader>ha", function()
-  require("harpoon.mark").add_file()
+    require("harpoon.mark").add_file()
 end, { desc = "Mark a file in harpoon" })
 
 vim.keymap.set("n", "<leader>hn", function()
-  require("harpoon.ui").nav_next()
+    require("harpoon.ui").nav_next()
 end, { desc = "Next file in harpoon" })
 
 vim.keymap.set("n", "<leader>hp", function()
-  require("harpoon.ui").nav_prev()
+    require("harpoon.ui").nav_prev()
 end, { desc = "Previous file in harpoon" })
 -- -#
 
@@ -68,10 +68,10 @@ vim.keymap.set("n", "<F10>", require("dap").step_over, { noremap = true, silent 
 vim.keymap.set("n", "<F11>", require("dap").step_into, { noremap = true, silent = true, desc = "dap step into" })
 vim.keymap.set("n", "<F12>", require("dap").step_out, { noremap = true, silent = true, desc = "dap step out" })
 vim.keymap.set(
-  "n",
-  "<leader>b",
-  require("dap").toggle_breakpoint,
-  { noremap = true, silent = true, desc = "dap toggle break point" }
+    "n",
+    "<leader>b",
+    require("dap").toggle_breakpoint,
+    { noremap = true, silent = true, desc = "dap toggle break point" }
 )
 vim.keymap.set("n", "<leader>dg", require("dap").terminate, { noremap = true, silent = true, desc = "dap terminate" })
 -- -#
@@ -84,11 +84,14 @@ vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true })
 vim.keymap.set("n", "<leader>s", ":w<CR>", { silent = true })
 vim.keymap.set("n", "<C-t>", "<cmd>tabnew<CR>", { desc = "mine - new tab", noremap = true })
 vim.keymap.set("n", "<leader>t", function()
-  vim.cmd("terminal")
-  vim.cmd("startinsert")
+    vim.cmd("terminal")
+    vim.cmd("startinsert")
 end, { desc = "open terminal", noremap = true })
+
+-- zen mode
+vim.keymap.set("n", "<leader>z", ":ZenMode<CR>", { silent = true, noremap = true, desc = "zenmode" })
 
 -- format current buffer with conform
 vim.keymap.set("n", "<leader>ft", function()
-  require("conform").format()
+    require("conform").format()
 end, { noremap = true, silent = true, desc = "Format current buffer with conform" })

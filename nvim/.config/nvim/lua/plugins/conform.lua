@@ -7,7 +7,7 @@ return {
             formatters_by_ft = {
                 lua = { "stylua" },
                 go = { "gofmt" },
-                python = { "autopep8" },
+                python = { "black" },
                 javascript = { "prettier" },
                 css = { "prettier" },
                 html = { "prettier" },
