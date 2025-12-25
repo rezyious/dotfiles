@@ -37,4 +37,4 @@ error_symbol   = "[❯](fg:dark)"
 [python]
 symbol = ""
 style = "fg:lighter"
-format = '[ $symbol( $version) [\(($virtualenv)\)](fg:red) ]($style)'
+format = '[ $symbol( $version) [($virtualenv)](fg:red) ]($style)'
