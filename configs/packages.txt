@@ -82,3 +82,6 @@ https://git.sr.ht/~whynothugo/shotman
 
 # m3u8 downloader
 cargo install vsd
+
+# asccicinema
+https://github.com/asciinema/asciinema

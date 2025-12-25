@@ -140,7 +140,7 @@ export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
 
-alias v="nvim"
+alias nv="nvim"
 alias prx="proxychains -q -f ~/.dotfiles/configs/proxychains.conf"
 alias yt="yt-dlp --config-location ~/.dotfiles/configs/yt-dlp.conf"
 alias dot="cd $HOME/.dotfiles/"
