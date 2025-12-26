@@ -16,19 +16,19 @@ return {
 
             on_highlights = function(hl, c)
                 -- #-  Borderless Telescope
+                -- hl.Normal = {
+                --     bg = "#000000",
+                -- }
+                -- hl.NormalFloat = {
+                --     bg = "#000000",
+                -- }
+                -- hl.SignColumn = {
+                --     bg = "#000000",
+                -- }
+                -- hl.ColorColumn = {
+                --     bg = "#1c1c1c",
+                -- }
                 local prompt = "#2d3149"
-                hl.Normal = {
-                    bg = "#000000",
-                }
-                hl.NormalFloat = {
-                    bg = "#000000",
-                }
-                hl.SignColumn = {
-                    bg = "#000000",
-                }
-                hl.ColorColumn = {
-                    bg = "#1c1c1c",
-                }
                 hl.TelescopeNormal = {
                     bg = c.bg_dark,
                     fg = c.fg_dark,
