@@ -11,11 +11,15 @@ return {
                 colors.hint = colors.orange
                 colors.error = "#ff0000"
                 colors.warning = colors.yellow
-                colors.comment = colors.blue
+                colors.comment = colors.green
             end,
 
             on_highlights = function(hl, c)
-                -- #-  Borderless Telescope
+                hl.String = { fg = "#ffffff" }
+                hl.Keyword = { fg = c.blue0 }
+                hl.Variable = { fg = "#ffffff" }
+
+                -- #- black background [disabled]
                 -- hl.Normal = {
                 --     bg = "#000000",
                 -- }
@@ -28,6 +32,8 @@ return {
                 -- hl.ColorColumn = {
                 --     bg = "#1c1c1c",
                 -- }
+                -- -#
+                -- #-  Borderless Telescope
                 local prompt = "#2d3149"
                 hl.TelescopeNormal = {
                     bg = c.bg_dark,
