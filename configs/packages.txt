@@ -7,7 +7,6 @@ ghostty waybar wofi wmenu
 pavucontrol network-manager-applet networkmanager
 gnome-characters gnome-calculator
 
-
 # essentials
 git stow tmux firefox chromium wget curl proxychains-ng kate
 man-pages mand-db
@@ -53,6 +52,10 @@ speech-dispatcher piper-tts-bin
 
 # battery info and status
 acpi
+
+################################################################################
+aur:
+shotman
 
 ################################################################################
 # set default browser
