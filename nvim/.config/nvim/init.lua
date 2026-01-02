@@ -4,4 +4,3 @@ require("remaps")
 require("user_commands")
 
 vim.cmd("colorscheme tokyonight")
-Blackbg()

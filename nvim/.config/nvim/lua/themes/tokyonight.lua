@@ -4,7 +4,7 @@ return {
     priority = 1000,
     config = function()
         require("tokyonight").setup({
-            style = "night",
+            style = "moon",
             transparent = false,
             dim_inactive = false,
             on_colors = function(colors)
