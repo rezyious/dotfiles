@@ -95,3 +95,7 @@ vim.keymap.set("n", "<leader>z", ":ZenMode<CR>", { silent = true, noremap = true
 vim.keymap.set("n", "<leader>ft", function()
     require("conform").format()
 end, { noremap = true, silent = true, desc = "Format current buffer with conform" })
+
+-- dired
+vim.keymap.set("n", "-", ":Dired<CR>", { silent = true, noremap = true, desc = "dired" })
+vim.keymap.set("n", "<leader>-", ":DiredShellCmd<CR>", { silent = true, noremap = true, desc = "dired shell cmd" })
