@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$"
+
 # If not running interactively, don't do anything
 case $- in
 *i*) ;;
@@ -36,9 +38,9 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-xterm-color | *-256color) color_prompt=yes ;;
-esac
+# case "$TERM" in
+# xterm-color | *-256color) color_prompt=yes ;;
+# esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
@@ -150,6 +152,6 @@ alias path="echo $PATH | tr \":\" \"\n\" "
 
 pp="--proxy=127.0.0.1:10808"
 
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
-eval "$(starship init bash)"
+# export STARSHIP_CONFIG=~/.config/starship/starship.toml
+# eval "$(starship init bash)"
 
