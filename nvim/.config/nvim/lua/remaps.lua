@@ -97,5 +97,4 @@ vim.keymap.set("n", "<leader>ft", function()
 end, { noremap = true, silent = true, desc = "Format current buffer with conform" })
 
 -- dired
-vim.keymap.set("n", "-", ":Dired<CR>", { silent = true, noremap = true, desc = "dired" })
-vim.keymap.set("n", "<leader>-", ":DiredShellCmd<CR>", { silent = true, noremap = true, desc = "dired shell cmd" })
+vim.keymap.set("n", "<leader>-", ":Dired<CR>", { silent = true, noremap = true, desc = "dired" })

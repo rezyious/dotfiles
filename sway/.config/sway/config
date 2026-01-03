@@ -34,7 +34,7 @@ exec_always ~/.config/sway/clamshellmode.sh
 set $menu wofi  --show drun  -i | xargs swaymsg exec --
 
 # wmenu
-bindsym Mod4+g exec wmenu-run
+bindsym Mod4+g exec wmenu-run -N "#222436" -S "#ff0000"
 
 ### Idle configuration
 #
