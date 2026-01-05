@@ -6,6 +6,7 @@ sway swaybg swayidle swaylock brightnessctl
 ghostty waybar wofi wmenu
 pavucontrol network-manager-applet networkmanager
 gnome-characters gnome-calculator
+feh imv loupe
 
 # essentials
 git stow tmux firefox chromium wget curl proxychains-ng kate

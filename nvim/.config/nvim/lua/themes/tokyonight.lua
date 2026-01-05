@@ -5,7 +5,7 @@ return {
     config = function()
         require("tokyonight").setup({
             style = "moon",
-            transparent = false,
+            transparent = true,
             dim_inactive = false,
             on_colors = function(colors)
                 colors.hint = colors.orange

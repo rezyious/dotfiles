@@ -1,5 +1,6 @@
 ignore-empty-password
 
+image=~/.dotfiles/bg/002.jpg
 color=222436
 indicator-idle-visible
 indicator-radius=150

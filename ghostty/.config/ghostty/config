@@ -1,7 +1,7 @@
 font-family = "Iosevka NFM"
 font-size = 18
 theme = "TokyoNight Moon"
-#background-opacity = 0.9
+background-opacity = 0.9
 mouse-hide-while-typing = true
 #cursor-style = bar
 window-padding-x = 0

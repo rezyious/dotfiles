@@ -15,8 +15,7 @@ output HDMI-A-1 resolution 1920x1080
 set $term ghostty
 
 output * bg #222436 solid_color
-# output * bg #1a1b26 solid_color
-# output "*" bg ~/.dotfiles/bg/002.jpg fill
+output "*" bg ~/.dotfiles/bg/001.png fill
 
 # title bar colors
 client.focused          #eb6f92   #1f1d2e   #e0def4 #9ccfd8    #31748f
