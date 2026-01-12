@@ -62,20 +62,6 @@ vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 -- -#
 
--- #- debugger
-vim.keymap.set("n", "<F5>", require("dap").continue, { noremap = true, silent = true, desc = "dap continue" })
-vim.keymap.set("n", "<F10>", require("dap").step_over, { noremap = true, silent = true, desc = "dap step over" })
-vim.keymap.set("n", "<F11>", require("dap").step_into, { noremap = true, silent = true, desc = "dap step into" })
-vim.keymap.set("n", "<F12>", require("dap").step_out, { noremap = true, silent = true, desc = "dap step out" })
-vim.keymap.set(
-    "n",
-    "<leader>b",
-    require("dap").toggle_breakpoint,
-    { noremap = true, silent = true, desc = "dap toggle break point" }
-)
-vim.keymap.set("n", "<leader>dg", require("dap").terminate, { noremap = true, silent = true, desc = "dap terminate" })
--- -#
-
 -- personal
 vim.keymap.set("i", "<C-c>", "<Esc>", { noremap = true }) -- rempa Esc to Ctrl+c :)
 vim.keymap.set("n", "<leader>e", ":Ex<CR>", { silent = true, desc = "open netrw" })
@@ -95,6 +81,3 @@ vim.keymap.set("n", "<leader>z", ":ZenMode<CR>", { silent = true, noremap = true
 vim.keymap.set("n", "<leader>ft", function()
     require("conform").format()
 end, { noremap = true, silent = true, desc = "Format current buffer with conform" })
-
--- dired
-vim.keymap.set("n", "<leader>-", ":Dired<CR>", { silent = true, noremap = true, desc = "dired" })

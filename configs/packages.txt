@@ -6,6 +6,8 @@ sway swaybg swayidle swaylock brightnessctl
 ghostty waybar wofi wmenu
 pavucontrol network-manager-applet networkmanager
 gnome-characters gnome-calculator
+
+# image viewers
 feh imv loupe
 
 # essentials
@@ -20,7 +22,7 @@ man-pages mand-db
 # gcc
 # make sure gcc and make and build-essentials are installed
 
-# debugger
+# debugger => this also installs clang and clangd and clang-format
 lldb
 
 # neovim

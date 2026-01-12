@@ -6,6 +6,7 @@ return {
       FIX = { icon = " ", color = "#DC2626" },
       ERROR = { icon = " ", color = "#DC2626" },
       NOTE = { icon = " ", color = "#00f123" },
+      _ = { icon = " ", color = "#DC2626" },
     },
   },
 }
