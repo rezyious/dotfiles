@@ -11,6 +11,8 @@ return {
                 html = { "prettier" },
                 json = { "prettier" },
                 c = { "clang-format" },
+                rust = { "rustfmt" },
+                go = { "gofmt" }
             },
         })
     end,
