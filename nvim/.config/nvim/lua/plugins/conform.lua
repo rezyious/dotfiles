@@ -12,7 +12,10 @@ return {
                 json = { "prettier" },
                 c = { "clang-format" },
                 rust = { "rustfmt" },
-                go = { "gofmt" }
+                go = { "gofmt" },
+                bash = { "shfmt" },
+                sh = { "shfmt" },
+                zsh = { "shfmt" },
             },
         })
     end,
