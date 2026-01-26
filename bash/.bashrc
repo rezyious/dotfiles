@@ -70,7 +70,7 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias grep='grep --color=auto'
+    alias grep='grep --color=auto'
     #alias fgrep='fgrep --color=auto'
     #alias egrep='egrep --color=auto'
 fi
@@ -140,3 +140,13 @@ pp="--proxy=127.0.0.1:10808"
 # export STARSHIP_CONFIG=~/.config/starship/starship.toml
 # eval "$(starship init bash)"
 
+
+################################################################################
+#                               funcs                                          #
+################################################################################
+
+get_info() {
+    echo "TIME : $( date '+%A-%d-%B-%Y == %H:%M' )"
+    echo "UPTIME : $( uptime -p )"
+    echo "DISK USAGE : $( df -h | grep root | cut -d ' ' -f3- | cut -d '/' -f1)"
+}
