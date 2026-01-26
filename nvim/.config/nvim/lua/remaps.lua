@@ -1,3 +1,14 @@
+-- #- telescope
+local builtin_telescope = require("telescope.builtin")
+vim.keymap.set("n", "<leader>ff", builtin_telescope.find_files, { desc = "Telescope find files" })
+vim.keymap.set("n", "<leader>fg", builtin_telescope.live_grep, { desc = "Telescope live grep" })
+vim.keymap.set("n", "<leader>fb", builtin_telescope.buffers, { desc = "Telescope buffers" })
+vim.keymap.set("n", "<leader>fh", builtin_telescope.help_tags, { desc = "Telescope help tags" })
+vim.keymap.set("n", "<leader>fz", builtin_telescope.current_buffer_fuzzy_find, { desc = "Telescope fuzzyfinder" })
+vim.keymap.set("n", "<leader>fk", builtin_telescope.keymaps, { desc = "Telescope show keymaps" })
+vim.keymap.set("n", "<leader>fm", builtin_telescope.man_pages, { desc = "Telescope man pages" })
+-- -#
+
 -- #- lsp
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP hover" })
 vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "LSP refrences" })
@@ -49,6 +60,20 @@ vim.keymap.set("n", "<m-l>", "<C-w>l", { noremap = true, silent = true })
 -- #- Stay in indent mode
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
+-- -#
+
+-- #- debugger
+vim.keymap.set("n", "<F5>", require("dap").continue, { noremap = true, silent = true, desc = "dap continue" })
+vim.keymap.set("n", "<F10>", require("dap").step_over, { noremap = true, silent = true, desc = "dap step over" })
+vim.keymap.set("n", "<F11>", require("dap").step_into, { noremap = true, silent = true, desc = "dap step into" })
+vim.keymap.set("n", "<F12>", require("dap").step_out, { noremap = true, silent = true, desc = "dap step out" })
+vim.keymap.set(
+    "n",
+    "<leader>b",
+    require("dap").toggle_breakpoint,
+    { noremap = true, silent = true, desc = "dap toggle break point" }
+)
+vim.keymap.set("n", "<leader>dg", require("dap").terminate, { noremap = true, silent = true, desc = "dap terminate" })
 -- -#
 
 -- personal
