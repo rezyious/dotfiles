@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "pingning pacman mirrorlist"
+
+IFS_OLD=$IFS
+IFS=$'\n'
+for line in $( cat /etc/pacman.d/mirrorlist )
+do
+    if [ $( echo $line | grep -v "#" ) ]; then # not interested in comments
+        server=$( echo $line | sed -E 's/.*=[[:space:]]//' | cut -d "/" -f1-3 | sed -E 's/https?:\/\///' )
+        echo "pingning $server"
+        ping -c 4 $server
+        echo
+    fi
+done
+

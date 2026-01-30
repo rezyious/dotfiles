@@ -3,7 +3,7 @@ return {
     opts = {
         window = {
             backdrop = 0.8,
-            width = 140,
+            width = 100,
             height = 1,
             options = {
                 cursorline = false,
