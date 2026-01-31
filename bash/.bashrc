@@ -132,6 +132,12 @@ then
 export PATH=$PATH:$HOME/.dotfiles/scripts/
 fi
 
+
+if [ -d $HOME/bin/ ]
+then
+export PATH=$PATH:$HOME/bin/
+fi
+
 alias nv="nvim"
 alias prx="proxychains -q -f ~/.dotfiles/configs/proxychains.conf"
 alias yt="yt-dlp --config-location ~/.dotfiles/configs/yt-dlp.conf"

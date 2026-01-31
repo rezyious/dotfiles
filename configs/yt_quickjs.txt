@@ -1,0 +1,10 @@
+for yt-dlp it needs quicksjs
+
+binary release from here:
+https://bellard.org/quickjs/binary_releases/
+
+extract and make sure they are executables
+
+
+and add this to yt-dlp.conf for example:
+--js-runtimes quickjs:/home/reza/bin/quickjs-linux-x86_64-2025-09-13/qjs
