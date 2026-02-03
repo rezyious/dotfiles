@@ -10,6 +10,14 @@ gnome-characters gnome-calculator
 # image viewers
 feh imv loupe
 
+# pwvucontrol
+repo:
+https://github.com/saivert/pwvucontrol
+
+install it with flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.saivert.pwvucontrol
+
 # essentials
 git stow tmux firefox chromium wget curl proxychains-ng kate
 man-pages mand-db
