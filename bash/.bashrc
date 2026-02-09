@@ -161,3 +161,7 @@ get_info() {
     echo "UPTIME : $( uptime -p )"
     echo "DISK USAGE : $( df -h | grep root | cut -d ' ' -f3- | cut -d '/' -f1)"
 }
+
+local_ipv4() {
+    ip a | grep -E 'inet\b' | grep -v 127.0.0.1 | sed -E 's/.*inet //' | cut -d" " -f1 | cut -d"/" -f1
+}
