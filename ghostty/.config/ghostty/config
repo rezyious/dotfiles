@@ -1,6 +1,7 @@
 font-family = "Iosevka NFM"
 font-size = 18
-theme = "TokyoNight Moon"
+# theme = "TokyoNight Moon"
+theme = "iTerm2 Dark Background"
 background-opacity = 0.9
 mouse-hide-while-typing = true
 #cursor-style = bar
@@ -10,32 +11,14 @@ window-padding-balance = true
 
 app-notifications = no-clipboard-copy
 
-# set background color
-# background = #1a1b26
-background = #222436
-foreground = snow
-palette = 1=red
+background = #000000
+foreground = #ffffff
+palette = 1=DodgerBlue1
 palette = 3=gold1
-palette = 4=DodgerBlue1    
-palette = 6=OliveDrab1
-# background-image = ~/.dotfiles/bg/001.jpg
-# background-image-opacity = 0.1
+palette = 4=OliveDrab1
+palette = 5=OliveDrab2
 
 
-# My palette faves
-# DodgerBlue1 = #1e90ff 
-# gold1 = #ffd700
-# OliveDrab1= #c0ff3e
-# snow = #fffafa
 
-# Ghostty uses a 16-color palette, indexed 0–15:
-# 0 = black          8  = bright black
-# 1 = red            9  = bright red
-# 2 = green          10 = bright green
-# 3 = yellow         11 = bright yellow
-# 4 = blue           12 = bright blue
-# 5 = magenta        13 = bright magenta
-# 6 = cyan           14 = bright cyan
-# 7 = white          15 = bright white
 
 

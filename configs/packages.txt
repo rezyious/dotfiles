@@ -10,13 +10,41 @@ gnome-characters gnome-calculator
 # image viewers
 feh imv loupe
 
+
+
+sudo pacman -S pipewire pipewire-pulse wireplumber
+################################################################################
+
+# bluetooth stuff 
+sudo pacman -S bluez bluez-utils blueman
+
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
+systemctl status bluetooth
+
+gui:
+blueman-manager
+
+applet:
+blueman-applet
+
+################################################################################
+
+
+################################################################################
+
 # pwvucontrol
+
+# install via flahub and set the download dir manually
+
 repo:
 https://github.com/saivert/pwvucontrol
 
-install it with flatpak
+# install it with flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.saivert.pwvucontrol
+
+################################################################################
 
 # essentials
 git stow tmux firefox chromium wget curl proxychains-ng kate
@@ -43,7 +71,7 @@ lldb
 ffmpeg ffmpegthumbnailer vlc vlc-plugins-all 
 
 # utils
-dysk ncdu htop evince lsof nautilus exiftool tldr fastfetch tree unrar
+dysk ncdu htop evince lsof nautilus exiftool tldr fastfetch tree unrar bat
 
 # torrent and download manager
 qbittorrent 

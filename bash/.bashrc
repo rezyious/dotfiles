@@ -148,8 +148,19 @@ alias path="echo $PATH | tr \":\" \"\n\" "
 
 pp="--proxy=127.0.0.1:10808"
 
-# export STARSHIP_CONFIG=~/.config/starship/starship.toml
-# eval "$(starship init bash)"
+# flathub aliases
+alias pwvucontrol="flatpak run com.saivert.pwvucontrol"
+
+
+# fzf
+fzf_nvim() {
+    local file
+    file=$(fd --type f | fzf \
+    --preview 'bat --style=numbers --color=always {}') || return
+    nvim "$file"
+}
+
+bind -x '"\C-p": fzf_nvim'
 
 
 ################################################################################
