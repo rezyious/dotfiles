@@ -1,0 +1,52 @@
+#!/bin/env bash
+
+rename_sp_da() {
+    if [ $# -eq 0 ]; then
+        echo "usage : -p [ABSOLUTE_PATH]"
+        echo "        -c [CURRENR_DIR]"
+        exit 1
+    fi
+
+    PATH_TO_DIR=""
+
+    while getopts :cp: opt; do
+        case "$opt" in
+        p)
+            if [ -d "$OPTARG" ]; then
+                PATH_TO_DIR=$OPTARG
+            else
+                echo directory "$OPTARG" does not exist
+                exit 1
+            fi
+            ;;
+        c)
+            PATH_TO_DIR=$PWD
+            ;;
+        *)
+            echo "usage : -p [ABSOLUTE_PATH]"
+            echo "        -c [CURRENR_DIR]"
+            exit 1
+            ;;
+        esac
+    done
+
+    echo renaming files in $PATH_TO_DIR
+
+    OLD_IFS=$IFS
+    IFS=$'\n'
+
+    for FILE in $(ls --sort=width "$PATH_TO_DIR"); do
+        converted=$(echo "${FILE}" | sed -E 's/[[:space:]]/_/g')
+        if [ $converted = $FILE ]; then
+            continue
+        fi
+
+        mv -v $PATH_TO_DIR/"$FILE" $PATH_TO_DIR/"$converted"
+    done
+
+    IFS=$OLD_IFS
+    echo
+    echo DONE
+}
+
+rename_sp_da $@

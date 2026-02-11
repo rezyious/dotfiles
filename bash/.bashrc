@@ -24,7 +24,6 @@ shopt -s checkwinsize
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
 
-
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
@@ -98,45 +97,52 @@ if ! shopt -oq posix; then
     fi
 fi
 
-#cargo
-. "$HOME/.cargo/env"
-
-
-# pnpm
-export PNPM_HOME="/home/reza/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
 
 # vi mode
 # set -o vi
 set -o emacs # default emacs mode
+
+
+export EDITOR=nvim
+export VISUAL=nvim
+export PAGER=less
+
+# go
+export GO_BIN_PATH="/usr/local/go/bin"
+case ":$PATH:" in
+*":$GO_BIN_PATH:"*) ;;
+*) PATH="$GO_BIN_PATH:$PATH" ;;
+esac
+
+# my scripts
+export MY_SCRIPTS="$HOME/.dotfiles/scripts/" 
+case ":$PATH:" in
+*":$MY_SCRIPTS:"*) ;;
+*) PATH="$MY_SCRIPTS:$PATH" ;;
+esac
+
+export MY_BIN_PATH="$HOME/bin/"
+case ":$PATH:" in
+*":$MY_BIN_PATH:"*) ;;
+*) PATH="$MY_BIN_PATH:$PATH" ;;
+esac
+
+# # pnpm
+export PNPM_HOME="/home/reza/.local/share/pnpm"
+case ":$PATH:" in
+*":$PNPM_HOME:"*) ;;
+*) PATH="$PNPM_HOME:$PATH" ;;
+esac
+# # pnpm end
 
 # nvm - node
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
-# go
-export PATH=$PATH:/usr/local/go/bin
+#cargo
+. "$HOME/.cargo/env"
 
-# export PATH="$HOME/bin:$PATH"
-export EDITOR=nvim
-export VISUAL=nvim
-export PAGER=less
-
-if [ -d $HOME/.dotfiles/scripts/ ]
-then
-export PATH=$PATH:$HOME/.dotfiles/scripts/
-fi
-
-
-if [ -d $HOME/bin/ ]
-then
-export PATH=$PATH:$HOME/bin/
-fi
 
 alias nv="nvim"
 alias prx="proxychains -q -f ~/.dotfiles/configs/proxychains.conf"
@@ -151,28 +157,48 @@ pp="--proxy=127.0.0.1:10808"
 # flathub aliases
 alias pwvucontrol="flatpak run com.saivert.pwvucontrol"
 
-
 # fzf
 fzf_nvim() {
     local file
     file=$(fd --type f | fzf \
-    --preview 'bat --style=numbers --color=always {}') || return
+        --preview 'bat --style=numbers --color=always {}') || return
     nvim "$file"
 }
 
 bind -x '"\C-p": fzf_nvim'
-
 
 ################################################################################
 #                               funcs                                          #
 ################################################################################
 
 get_info() {
-    echo "TIME : $( date '+%A-%d-%B-%Y == %H:%M' )"
-    echo "UPTIME : $( uptime -p )"
-    echo "DISK USAGE : $( df -h | grep root | cut -d ' ' -f3- | cut -d '/' -f1)"
+    echo "TIME : $(date '+%A-%d-%B-%Y == %H:%M')"
+    echo "UPTIME : $(uptime -p)"
+    echo "DISK USAGE : $(df -h | grep root | cut -d ' ' -f3- | cut -d '/' -f1)"
 }
 
 local_ipv4() {
     ip a | grep -E 'inet\b' | grep -v 127.0.0.1 | sed -E 's/.*inet //' | cut -d" " -f1 | cut -d"/" -f1
+}
+
+ping_pacman_mirrors() {
+
+    echo "pingning pacman mirrorlist"
+    echo
+
+    IFS_OLD=$IFS
+    IFS=$'\n'
+    SERVER_NUMBER=1
+    for line in $(cat /etc/pacman.d/mirrorlist); do
+        if [ $(echo $line | grep -v "#") ]; then # not interested in comments
+            server=$(echo $line | sed -E 's/.*=[[:space:]]//' | cut -d "/" -f2-3 | sed 's/\///')
+            echo "################################################################################"
+            echo SERVER $SERVER_NUMBER
+            echo "pingning $server"
+            ping -c 4 -n $server
+            sleep 1
+            SERVER_NUMBER=$(($SERVER_NUMBER + 1))
+            echo
+        fi
+    done
 }
