@@ -10,9 +10,8 @@ gnome-characters gnome-calculator
 # image viewers
 feh imv loupe
 
-
-
 sudo pacman -S pipewire pipewire-pulse wireplumber
+
 ################################################################################
 
 # bluetooth stuff 
@@ -71,7 +70,9 @@ lldb
 ffmpeg ffmpegthumbnailer vlc vlc-plugins-all 
 
 # utils
-dysk ncdu htop evince lsof nautilus exiftool tldr fastfetch tree unrar bat
+dysk ncdu htop evince lsof 
+nautilus python-dbus nautilus-python
+exiftool tldr fastfetch tree unrar bat
 
 # torrent and download manager
 qbittorrent 

@@ -156,6 +156,7 @@ pp="--proxy=127.0.0.1:10808"
 
 # flathub aliases
 alias pwvucontrol="flatpak run com.saivert.pwvucontrol"
+alias telegram="flatpak run org.telegram.desktop"
 
 # fzf
 fzf_nvim() {
