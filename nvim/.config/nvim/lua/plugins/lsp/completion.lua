@@ -24,16 +24,16 @@ return {
       cmp.setup({
         enabled = true,
 
-        window = {
-          documentation = cmp.config.disable, -- disables docs window
-        },
-
-        formatting = {
-          fields = { "abbr" }, -- only the word itself
-          format = function(_, vim_item)
-            return vim_item
-          end,
-        },
+        -- window = {
+        --   documentation = cmp.config.disable, -- disables docs window
+        -- },
+        --
+        -- formatting = {
+        --   fields = { "abbr" }, -- only the word itself
+        --   format = function(_, vim_item)
+        --     return vim_item
+        --   end,
+        -- },
 
         mapping = cmp.mapping.preset.insert({
           ["<C-b>"] = cmp.mapping.scroll_docs(-4),

@@ -13,7 +13,7 @@ end, {})
 vim.api.nvim_create_user_command("BWOff", function()
   vim.cmd("syntax on")
   vim.cmd("TSEnable highlight")
-  vim.cmd("colorscheme tokyonight")
+  vim.cmd("colorscheme vscode")
 end, {})
 
 -- functions

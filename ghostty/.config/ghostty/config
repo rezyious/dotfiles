@@ -1,10 +1,7 @@
 font-family = "Iosevka NFM"
-font-size = 18
-# theme = "TokyoNight Moon"
-theme = "iTerm2 Dark Background"
+font-size = 14
 background-opacity = 0.9
 mouse-hide-while-typing = true
-#cursor-style = bar
 window-padding-x = 0
 window-padding-y = 0
 window-padding-balance = true

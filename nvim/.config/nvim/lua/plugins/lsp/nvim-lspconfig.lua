@@ -27,9 +27,11 @@ return {
     })
 
     -- enable all servers
-    -- vim.lsp.enable({
-    --   "emmet_ls",
-    --   "ts_ls",
-    -- })
+    vim.lsp.enable({
+      "emmet_ls",
+      "ts_ls",
+      "gopls",
+      "clangd",
+    })
   end,
 }
