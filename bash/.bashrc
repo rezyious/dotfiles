@@ -99,9 +99,8 @@ fi
 
 
 # vi mode
-# set -o vi
-set -o emacs # default emacs mode
-
+set -o vi
+# set -o emacs # default emacs mode
 
 export EDITOR=nvim
 export VISUAL=nvim
@@ -152,7 +151,7 @@ alias src="source ~/.bashrc"
 alias ll="ls -lah --color=auto"
 alias path="echo $PATH | tr \":\" \"\n\" "
 
-pp="--proxy=127.0.0.1:10808"
+pp="--proxy=10.111.197.66:8080"
 
 # flathub aliases
 alias pwvucontrol="flatpak run com.saivert.pwvucontrol"
@@ -168,6 +167,7 @@ fzf_nvim() {
 
 bind -x '"\C-p": fzf_nvim'
 
+bind -x '"\C-l": clear'
 ################################################################################
 #                               funcs                                          #
 ################################################################################

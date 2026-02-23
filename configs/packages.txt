@@ -30,6 +30,12 @@ blueman-applet
 ################################################################################
 
 
+# Offline API documentation browser
+zeal
+
+# and download the dcos you need
+
+
 ################################################################################
 
 # pwvucontrol
@@ -58,6 +64,9 @@ man-pages mand-db
 # make sure gcc and make and build-essentials are installed
 
 # debugger => this also installs clang and clangd and clang-format
+# look in /usr/share/doc/ and in clang and clang-tools
+# for example for style options it is here
+# /usr/share/doc/clang/html/ClangFormatStyleOptions.html
 lldb
 
 # neovim
