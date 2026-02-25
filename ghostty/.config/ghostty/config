@@ -1,5 +1,5 @@
-font-family = "TempleOs"
-font-size = 16
+font-family = "MesloLGLDZ Nerd Font"
+font-size = 18.5
 background-opacity = 0.9
 mouse-hide-while-typing = true
 window-padding-x = 0
@@ -18,4 +18,3 @@ palette = 5=OliveDrab2
 
 
 
-# != 
