@@ -52,7 +52,7 @@ flatpak install flathub com.saivert.pwvucontrol
 ################################################################################
 
 # essentials
-git stow tmux firefox chromium wget curl proxychains-ng kate
+git stow tmux firefox chromium wget curl proxychains-ng kate gedit gnome-font-viewer
 man-pages mand-db
 
 # languages

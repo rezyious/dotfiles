@@ -1,3 +1,5 @@
+-- remaps 
+
 -- #- telescope
 local builtin_telescope = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin_telescope.find_files, { desc = "Telescope find files" })
@@ -11,9 +13,9 @@ vim.keymap.set("n", "<leader>fm", builtin_telescope.man_pages, { desc = "Telesco
 
 -- #- lsp
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP hover" })
-vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "LSP refrences" })
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP code action" })
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "LSP: go to definition" })
+vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "LSP refrences" })
 -- -#
 
 -- #- cmp
@@ -77,7 +79,7 @@ vim.keymap.set("n", "<leader>dg", require("dap").terminate, { noremap = true, si
 -- -#
 
 -- personal
-vim.keymap.set("i", "<C-c>", "<Esc>", { noremap = true }) -- rempa Esc to Ctrl+c :)
+vim.keymap.set("i", "<C-c>", "<Esc>", { noremap = true }) -- remap Esc to Ctrl+c :)
 vim.keymap.set("n", "<leader>e", ":Ex<CR>", { silent = true, desc = "open netrw" })
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { silent = true })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true })

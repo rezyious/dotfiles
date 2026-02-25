@@ -27,6 +27,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.fillchars:append({ eob = " " })
 vim.opt.termguicolors = true
+vim.o.winborder = 'rounded'
 
 -- show diagnostics instead of just hinting
 vim.diagnostic.config({

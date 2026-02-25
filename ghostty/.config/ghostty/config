@@ -1,5 +1,5 @@
-font-family = "Iosevka NFM"
-font-size = 14
+font-family = "TempleOs"
+font-size = 16
 background-opacity = 0.9
 mouse-hide-while-typing = true
 window-padding-x = 0
@@ -18,4 +18,4 @@ palette = 5=OliveDrab2
 
 
 
-
+# != 

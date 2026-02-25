@@ -11,6 +11,7 @@ return {
                 html = { "prettier" },
                 json = { "prettier" },
                 c = { "clang-format" },
+                cpp = { "clang-format" },
                 rust = { "rustfmt" },
                 go = { "gofmt" },
                 bash = { "shfmt" },

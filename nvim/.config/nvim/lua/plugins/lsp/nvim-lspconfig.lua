@@ -32,6 +32,7 @@ return {
             "html",
             "ts_ls",
             "bashls",
+            "clangd",
         })
     end,
 }
